@@ -1,102 +1,95 @@
-
-/* equivolent of addEventListener('load', start); in JQuery*/
-$(function() {
+X();
+function X() {
   "use strict";
+  addEventListener('load', start);
 
-  var $container = $('#my-isotope').imagesLoaded( function() {
-     // init
-     $container.isotope({
-        // options
-        itemSelector: '.content-preview',
-        layoutMode: 'masonry'
-      });
-   });
+  function start() {
+      var $isotopeContainer = $( "#my-isotope" );
 
-   // layout Isotope again after all images have loaded
-   $container.imagesLoaded( function() {
-      $container.isotope('layout');
-   });
+      var myIsotope = buildMyIsotopeModule($isotopeContainer);
+      myIsotope.repeatLayout();
+      //filter:
 
-  //filter:
-  function tagFilterer($container) {
-    var $container = $container;
-    var tagSelector = [];
-    return { addTag: addTag };
+      var tagFilterer = buildTagFiltererModule($isotopeContainer);
+      $(window).on( 'hashchange', tagFilterer.onHashchange );
+   //   $( "#btn-tag-filter" ).on( "click", tagFilterer.addTag( $( "#form-tag-filter" ).val() ) );
+   }
 
-    function addTag(newTag) {
-      var separatedTags = newTag.split("# ");
-      for(var i=0; i<separatedTags.length; ++i) {
-        this.tagSelector[i] = separatedTags[i];
+
+
+   function buildMyIsotopeModule($container)
+   {
+      var $isotopeContainer = $container;
+      $isotopeContainer.imagesLoaded(initIsotope());
+
+      function initIsotope() {
+         // init
+          $container.isotope({
+             // options
+             itemSelector: '.content-preview',
+             layoutMode: 'masonry'
+          });
       }
-      this.updateFilterForm();
-      this.filterContent();
-    }
 
-    function updateFilterForm() {
-       if(tagSelector.length) {
-          var selector;
-          for(var i=0; i<tagSelector.length; ++i) {
-             selector = selector.concat("#");
-             selector = selector.concat(tagSelector[i]);
-             selector = selector.concat(" ");
-          }
-          $( "#form-tag-filter" ).val(selector);
-       }
-    }
-
-    function filterContent() {
-       var selector = "content-preview[data-tags~=' ";
-       for(var i=0; i<tagSelector.length; ++i) {
-          selector = selector.concat(tagSelector[i]);
-          selector = selector.concat(" ");
-       }
-       selector = selector.concat("'");
-       $container.isotope({ filter: slector });
-    }
-
-  }
-  var tagFilterer = tagFilterer($container);
-
-  $( "#btn-tag-filter" ).on( "click", tagFilterer.addTag( $( "#form-tag-filter" ).val() ) );
+      function repeatLayout() {
+         $isotopeContainer.isotope('layout');
+      }
+      return { repeatLayout: repeatLayout };
+   }
 
 
-});
+   function buildTagFiltererModule($container)
+   {
+      var $isotopeContainer = $container;
+
+     var $btnTagFilter = $( "#btn-tag-filter" );
+     var $formTagFilter = $( "#form-tag-filter" );
+
+     return { onHashChange: onHashChange, onFormSubmit: onFormSubmit };
 
 
-function tagFilterer($isotopeContainter) {
-  var $container = $isotopeContainer;
-  var tagSelector = [];
-  return { addTag: addTag };
 
-  function addTag(newTag) {
-    var separatedTags = newTag.split("# ");
-    for(var i=0; i<separatedTags.length; ++i) {
-      this.tagSelector[i] = separatedTags[i];
-    }
-    this.updateFilterForm();
-    this.filterContent();
-  }
-
-  function updateFilterForm() {
-     if(tagSelector.length) {
-        var selector;
+     function filterContent() {
+        var selector = "content-preview[data-tags~=' ";
         for(var i=0; i<tagSelector.length; ++i) {
-           selector = selector.concat("#");
            selector = selector.concat(tagSelector[i]);
            selector = selector.concat(" ");
         }
-        $( "#form-tag-filter" ).val(selector);
+        selector = selector.concat("'");
+        $isotopeContainer.isotope({ filter: selector });
      }
-  }
 
-  function filterContent() {
-     var selector = "content-preview[data-tags~=' ";
-     for(var i=0; i<tagSelector.length; ++i) {
-        selector = selector.concat(tagSelector[i]);
-        selector = selector.concat(" ");
+     function getHashFilter() {
+        var hash = location.hash;
+        // get filter=filterName
+        var matches = location.hash.match( /filter=([^&]+)/i );
+        var hashFilter = matches && matches[1];
+        return hashFilter && decodeURIComponent( hashFilter );
      }
-     selector = selector.concat("'");
-     $container.isotope({ filter: slector });
-  }
 
+     function onHashChange() {
+        console.log("reached here with");
+        var hashFilter = getHashFilter();
+        if ( !hashFilter ) {
+           return;
+        }
+        // filter isotope
+        $isotopeContainer.isotope({
+           filter: hashFilter
+        });
+        // set selected class on button
+        if ( hashFilter ) {
+           $filters.find('.is-checked').removeClass('is-checked');
+           $filters.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+        }
+     }
+
+     function onFormSubmit() {
+        formTagFilterValue = $formTagFilter.val();
+        // set filter in hash
+        location.hash = 'filter=' + encodeURIComponent( formTagFilterValue );
+        onHashFilter();
+     }
+
+   }
 }
