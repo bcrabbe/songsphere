@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var https = require('https');
 var fs = require('fs');
+var ejs = require('ejs');
 var expressSession = require('express-session');
 var mongooseSession = require('mongoose-session');
 var mongoose = require('mongoose');
@@ -31,6 +32,15 @@ https.createServer(options, app).listen(4111);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+ejs.filters.get = function(obj, prop, def) {
+  return obj[prop] === undefined ? def : obj[prop];
+};
+
+ejs.filters.signedIn = function(obj, prop, def) {
+  return obj[prop] === undefined ? def : obj[prop];
+};
+
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
