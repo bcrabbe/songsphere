@@ -6,8 +6,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var https = require('https');
 var fs = require('fs');
+var expressSession = require('express-session');
+var mongooseSession = require('mongoose-session');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+
+var dbName = 'songsphere';
+var connectionString = 'mongodb://localhost:27017/' + dbName;
+mongoose.connect(connectionString);
+
 
 var routes = require('./routes/index');
 //var users = require('./routes/users');
@@ -32,6 +38,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(expressSession({
+        key: 'session',
+        secret: '128013A7-5B9F-4CC0-BD9E-4480B2D3EFE9',
+        store: new mongooseSession(mongoose),
+        resave: true,
+        saveUninitialized: true
+    })
+);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
