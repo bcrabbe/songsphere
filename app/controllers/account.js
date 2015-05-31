@@ -26,6 +26,8 @@ AccountController.prototype.hashPassword = function (password, salt, callback) {
     this.crypto.pbkdf2(password, salt, iterations, keyLen, callback);
 };
 
+
+
 AccountController.prototype.register = function (newUser, callback) {
     var me = this;
     me.userModel.findOne({ username: newUser.username }, function (err, user) {
@@ -55,27 +57,22 @@ AccountController.prototype.register = function (newUser, callback) {
 
 AccountController.prototype.logon = function(username, password, callback) {
     var me = this;
-    me.userModel.findOne({ email: email }, function (err, user) {
+    console.log("un = " + username);
+    console.log("pw = " + password);
 
+    me.userModel.findOne({ username: username }, function (err, user) {
         if (err) {
             return callback(err, new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.DB_ERROR } }));
         }
-
         if (user) {
-
             me.hashPassword(password, user.passwordSalt, function (err, passwordHash) {
-
-                if (passwordHash == user.passwordHash) {
-
+                if (passwordHash.toString('hex') === user.passwordHash) {
                     var userProfileModel = new me.UserProfile({
                         email: user.email,
-                        firstName: user.firstName,
-                        lastName: user.lastName
+                        username: user.username,
                     });
-
                     me.session.userProfileModel = userProfileModel;
                     me.session.id = me.uuid.v4();
-
                     return callback(err, new me.ApiResponse({
                         success: true, extras: {
                             userProfileModel: userProfileModel,
@@ -87,7 +84,7 @@ AccountController.prototype.logon = function(username, password, callback) {
                 }
             });
         } else {
-            return callback(err, new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.EMAIL_NOT_FOUND } }));
+            return callback(err, new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.USERNAME_NOT_FOUND } }));
         }
 
     });
@@ -102,11 +99,9 @@ AccountController.prototype.logoff = function () {
 AccountController.prototype.resetPassword = function (email, callback) {
     var me = this;
     me.userModel.findOne({ email: email }, function (err, user) {
-
         if (err) {
             return callback(err, new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.DB_ERROR } }));
         }
-
         if (user) {
             // Save the user's email and a password reset hash in session.
             var passwordResetHash = me.uuid.v4();
@@ -127,29 +122,21 @@ AccountController.prototype.resetPasswordFinal = function (email, newPassword, n
     if (!me.session || !me.session.passwordResetHash) {
         return callback(null, new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.PASSWORD_RESET_EXPIRED } }));
     }
-
     if (me.session.passwordResetHash !== passwordResetHash) {
         return callback(null, new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.PASSWORD_RESET_HASH_MISMATCH } }));
     }
-
     if (me.session.emailWhoRequestedPasswordReset !== email) {
         return callback(null, new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.PASSWORD_RESET_EMAIL_MISMATCH } }));
     }
-
     if (newPassword !== newPasswordConfirm) {
         return callback(null, new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.PASSWORD_CONFIRM_MISMATCH } }));
     }
-
     var passwordSalt = this.uuid.v4();
-
     me.hashPassword(newPassword, passwordSalt, function (err, passwordHash) {
-
         me.userModel.update({ email: email }, { passwordHash: passwordHash, passwordSalt: passwordSalt }, function (err, numberAffected, raw) {
-
             if (err) {
                 return callback(err, new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.DB_ERROR } }));
             }
-
             if (numberAffected < 1) {
 
                 return callback(err, new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.COULD_NOT_RESET_PASSWORD } }));
@@ -165,7 +152,7 @@ AccountController.prototype.getUserFromUserRegistration = function(userRegistrat
     if (userRegistrationModel.password !== userRegistrationModel.passwordConfirm) {
         return new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.PASSWORD_CONFIRM_MISMATCH } });
     }
-
+    
     var passwordSaltIn = this.uuid.v4(),
         cryptoIterations = 10000, // Must match iterations used in controller#hashPassword.
         cryptoKeyLen = 64,       // Must match keyLen used in controller#hashPassword.
@@ -174,7 +161,7 @@ AccountController.prototype.getUserFromUserRegistration = function(userRegistrat
     var user = new this.User({
         username: userRegistrationModel.username,
         email: userRegistrationModel.email,
-        passwordHash: this.crypto.pbkdf2Sync(userRegistrationModel.password, passwordSaltIn, cryptoIterations, cryptoKeyLen),
+        passwordHash: this.crypto.pbkdf2Sync(userRegistrationModel.password, passwordSaltIn, cryptoIterations, cryptoKeyLen).toString('hex'),
         passwordSalt: passwordSaltIn
     });
 
