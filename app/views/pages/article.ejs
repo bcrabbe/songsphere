@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+    <head>
+    <% include ../partials/head %>
+
+    </head>
+<body>
+<% include ../partials/navbar %>
+  <div class="container">
+            <div class="row row-offcanvas row-offcanvas-right">
+                <div class="col-xs-12 col-sm-8">
+                    <div class="jumbotron">
+                        <h2><%= PostTitle %></h2>
+                        <a href="#"> <mark class="author"><%= PostAuthor %></mark> </a>
+                        <br/><br/>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <%= PostMedia %>
+                        </div>
+                        <br/><br/>
+                        <p><%= PostBody %>
+                        </p>
+                    </div>
+                </div><!--/.col-xs-12.col-sm-9-->
+                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                    <div class="list-group">
+                        <h4>Other posts from <%= PostAuthor %></h4>
+
+                         <% previews.forEach(function(post) { %>
+                        <div class="well other-posts-from-user" >
+                        <a href="./article?ID=<%= post._id %>"> <h3><%= post.title %></h3></a>
+                        <a href="#"><mark class="author"><%= post.author%></mark></a>
+                        <br/>
+                        <div class="embed-responsive embed-responsive-16by9">
+                        <%= post.media %>
+                        </div>
+
+                        <span class="content-tags">
+                            <% post.tags.forEach(function(tag) { %>
+                                <a href="/?filter=<%= tag%>">  <%= tag%> </a>
+                            <% }); %>
+                        </span>
+                        <p><a class="btn btn-default btn-expand-article" href="./article?ID=<%= post._id %>" role="button">Read</a></p>
+                    </div>
+                <% }); %>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Blog Comments -->
+            <!-- Comments Form -->
+            <div class="row">
+                <div class="well col-xs-12 col-sm-8">
+                    <h4>Leave a Comment:</h4>
+                    <form role="form" action="./comment?ID=<%=ID %>" method="post">
+                        <div class="form-group">
+                            <textarea class="form-control" id="comment-box" required=""  type="text" name="comment" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Posted Comments -->
+
+            <!-- Comment -->
+            <div class="row">
+                <div class="  well col-xs-12 col-sm-10 col-md-8">
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="http://placehold.it/64x64" alt=""/>
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Name
+                                <small>March 16, 2015 at 9:30 PM</small>
+                            </h4>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </div>
+                    <br/>
+                    <!-- Comment -->
+                    <div class="row">
+                        <div class=" col-xs-12 col-sm-11 col-md-10">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="http://placehold.it/64x64" alt=""/>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Name
+                                        <small>March 16, 2015 at 9:30 PM</small>
+                                    </h4>
+                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                    <!-- Nested Comment -->
+                                    <div class="media">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" src="http://placehold.it/64x64" alt=""/>
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Nested...Name
+                                                <small>March 16, 2015 at 9:35 PMM</small>
+                                            </h4>
+                                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                        </div>
+                                    </div>
+                                    <!-- End Nested Comment -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div>
+    <% include ../partials/foot %>
+        </body>
+</html>

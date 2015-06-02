@@ -18,9 +18,8 @@ AccountController.prototype.setSession = function (session) {
 };
 
 AccountController.prototype.hashPassword = function (password, salt, callback) {
-    // We use pbkdf2 to hash and iterate 10k times by default 
     var iterations = 10000,
-        keyLen = 64; // 64 bit.
+        keyLen = 64;
     this.crypto.pbkdf2(password, salt, iterations, keyLen, callback);
 };
 
@@ -89,7 +88,6 @@ AccountController.prototype.logoff = function () {
     return;
 };
 
-
 AccountController.prototype.getUserFromUserRegistration = function(userRegistrationModel) {
     var me = this;
     if (userRegistrationModel.password !== userRegistrationModel.passwordConfirm) {
@@ -97,8 +95,8 @@ AccountController.prototype.getUserFromUserRegistration = function(userRegistrat
     }
     
     var passwordSaltIn = this.uuid.v4(),
-        cryptoIterations = 10000, // Must match iterations used in controller#hashPassword.
-        cryptoKeyLen = 64,       // Must match keyLen used in controller#hashPassword.
+        cryptoIterations = 10000,
+        cryptoKeyLen = 64,
         passwordHashIn;
 
     var user = new this.User({

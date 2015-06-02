@@ -10,63 +10,25 @@
             <div id="filter-place-holder"></div>
             <div class="row" id="my-isotope">
                 <div class="grid-sizer"></div>
-                <div class="content-preview well" data-author="SD" data-subject="EP" data-genre="Electronic House" data-year="2014" data-location="London" data-tags="SD Ninja Tune London 2014 House Electronic EP SD" data-label="Ninja Tune">
-                    <a href="./articleDisplay.html"><h3>Martyn + Four tet - Forgiveness EP Review.</h3></a>
-                    <a href="#"><mark class="author">SD</mark></a>
-                    <br/>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/147380962&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">
-                        </iframe>
+                 <% previews.forEach(function(post) { %>
+                    <div class="content-preview well">
+                        <a href="./article?ID=<%= post._id %>"> <h3><%= post.title %></h3></a>
+                        <a href="#"><mark class="author"><%= post.author%></mark></a>
+                        <br/>
+                        <div class="embed-responsive embed-responsive-16by9">
+                        <%= post.media %>
+                        </div>
+
+                        <span class="content-tags">
+                            <% post.tags.forEach(function(tag) { %>
+                                <a href="/?filter=<%= tag%>">  <%= tag%> </a>
+                            <% }); %>
+                        </span>
+                        <p><a class="btn btn-default btn-expand-article" href="./article?ID=<%= post._id %>" role="button">Read</a></p>
                     </div>
-                    <span class="content-tags"><a href="#filter=EP">EP</a>, <a href="#">Electronic</a>, <a href="#">House</a>, <a href="#">2014</a>, <a href="#">London, UK</a>, <a href="#">Vancouver, Canada</a>, <a href="#">Ninja Tune</a>
-                    </span>
-                    <p><a class="btn btn-default btn-expand-article" href="./articleDisplay.html" role="button">Read</a></p>
-                </div>
-                <div class="content-preview well" data-author="Elliot Hogg" data-subject="LP" data-genre="Electronic, Experimental" data-year="2013" data-location="Berlin/,/ Germany" data-tags="Psycadelic" data-label="Editions Mego">
-                    <a href="./articleDisplay.html"> <h3>Atom TM and Marc Behrens - Bauteile </h3> </a>
-                    <a href="#"><mark class="author">Elliot Hogg</mark></a>
-                    <br/>
-                    <span class="content-tags"><a href="#"> LP</a>, <a href="#">Electronic</a>, <a href="#">Experimental</a>, <a href="#">2013</a>, <a href="#">Berlin, Germany</a>, <a href="#">Psycadelic</a>, <a href="#">Editions Mego</a>
-                    </span>
-                    <p><a class="btn btn-default" href="./articleDisplay.html" role="button">Read</a></p>
-                </div>
-                <div class="content-preview well" data-author="Elliot Hogg" data-subject="LP" data-genre="Electronic, Experimental" data-year="2013" data-location="Berlin/,/ Germany" data-tags="Psycadelic" data-label="Editions Mego">
-                    <a href="./articleDisplay.html"><h3>The Humble Bee</h3></a>
-                    <a href="#"><mark class="author">Elliot Hogg</mark></a>
-                    <br/>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe  class="embed-responsive-item"  width="2%" height="2%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34080018&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
-                        </iframe>
-                    </div>
-                    <span class="content-tags"><a href="#"> LP</a>, <a href="#">Electronic</a>, <a href="#">Experimental</a>, <a href="#">2013</a>, <a href="#">Berlin, Germany</a>, <a href="#">Psycadelic</a>, <a href="#">Editions Mego</a>
-                    </span>
-                    <p><a class="btn btn-default" href="./articleDisplay.html" role="button">Read</a></p>
-                </div>
-                <div class="content-preview well" data-author="Elliot Hogg" data-subject="LP" data-genre="Electronic, Experimental" data-year="2013" data-location="Berlin/,/ Germany" data-tags="Psycadelic" data-label="Editions Mego">
-                    <a href="./articleDisplay.html"> <h3>Roly Porter - Life Cycle of a Massive Star </h3> </a>
-                    <a href="#"><mark class="author">Elliot Hogg</mark></a>
-                    <br/>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe width="267" height="150" src="https://www.youtube.com/embed/RpRmvyJAm4s" frameborder="0" >
-                        </iframe>
-                    </div>
-                    <span class="content-tags"><a href="#">LP</a>, <a href="#">Electronic</a>, <a href="#">Experimental</a>, <a href="#">2013</a>, <a href="#">Berlin, Germany</a>, <a href="#">Psycadelic</a>, <a href="#">Editions Mego</a>
-                    </span>
-                    <p><a class="btn btn-default" href="./articleDisplay.html" role="button">Read</a></p>
-                </div>
-                <div class="clearfix"></div>
-                <div class="content-preview well" data-author="SD" data-subject="EP" data-genre="Electronic, House" data-year="2014" data-location="London/,/ England, Vancouver/,/Canada" data-tags="" data-label="Ninja Tune">
-                    <a href="./articleDisplay.html"><h3>Martyn + Four tet - Forgiveness EP Review.</h3></a>
-                    <a href="#"><mark class="author">SD</mark></a>
-                    <br/>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/147380962&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">
-                        </iframe>
-                    </div>
-                    <span class="content-tags"><a href="#">ER</a>, <a href="#">Electronic</a>, <a href="#">House</a>, <a href="#">2014</a>, <a href="#">London, UK</a>, <a href="#">Vancouver, Canada</a>, <a href="#">Ninja Tune</a>
-                    </span>
-                    <p><a class="btn btn-default" href="./articleDisplay.html" role="button">Read</a></p>
-                </div>
+                <% }); %>
+
+
             </div>
         </div><!--/.container-->
 

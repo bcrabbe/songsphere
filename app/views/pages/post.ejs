@@ -9,22 +9,28 @@
 <% include ../partials/navbar %>
  <div class="container sign-in-container">
             <div class="col-xs-10 col-sm-10 col-md-10 col-lg-9">
-                <form class="form-post-content">
+                <form action="post" method="post" class="form-post-content">
                     <h2 class="form-post-content-heading">Post an Article</h2>
                     <div class="form-group">
                         <label for="add-post-title" >Title</label>
-                        <input type="text" id="add-post-title" class="form-control" placeholder="Add a Title" required="" autofocus=""/>
+                        <input type="text" name="title" id="add-post-title" class="form-control" placeholder="Add a Title" required="" autofocus=""/>
                     </div>
                     <div class="form-group">
                         <label for="form-embed-player" >Media</label>
-                        <input type="text" id="form-embed-player" class="form-control" placeholder="Add an embeded player html snippet or an image code."/>
+                        <input type="text" name="media" "id="form-embed-player" class="form-control" placeholder="Add an embeded player html snippet or an image code."/>
                     </div>
                     <div class="form-group">
                         <label for="form-post-article-body">Article Body</label>
-                        <textarea class="form-control" required=""  rows="5" id="form-post-article-body" placeholder="Write the article body here."></textarea>
+                        <textarea class="form-control" required=""  type="text" name="postBody" rows="5" id="form-post-article-body" placeholder="Write the article body here."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="add tags" >Tags</label>
+                        <input type="text" name="tags" id="add-post-title" class="form-control" placeholder="Add some tags"/>
                     </div>
                     <button class="btn btn-lg btn-primary btn-block sign-in-btn" type="submit"> Post it! </button>
                 </form>
+                <p><%=: locals | get:'error','' %> </p>
+
             </div>
         </div>
 

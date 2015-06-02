@@ -1,4 +1,4 @@
-﻿var UserController = function (userModel) {
+var UserController = function (userModel) {
 
     var crypto = require('crypto'),
         uuid = require('node-uuid'),

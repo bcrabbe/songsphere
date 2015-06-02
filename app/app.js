@@ -30,7 +30,7 @@ var app = express();
 https.createServer(options, app).listen(4111);
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
 ejs.filters.get = function(obj, prop, def) {
