@@ -7,13 +7,15 @@
 <body>
 <% include ../partials/navbar %>
 <div class="container">
+    <p><%=: locals | get:'error','' %> </p>
+
             <div id="filter-place-holder"></div>
             <div class="row" id="my-isotope">
                 <div class="grid-sizer"></div>
                  <% previews.forEach(function(post) { %>
                     <div class="content-preview well">
                         <a href="./article?ID=<%= post._id %>"> <h3><%= post.title %></h3></a>
-                        <a href="#"><mark class="author"><%= post.author%></mark></a>
+                        <a href="/?author=<%= post.author%>"><mark class="author"><%= post.author%></mark></a>
                         <br/>
                         <div class="embed-responsive embed-responsive-16by9">
                         <%= post.media %>

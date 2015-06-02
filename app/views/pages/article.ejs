@@ -11,7 +11,7 @@
                 <div class="col-xs-12 col-sm-8">
                     <div class="jumbotron">
                         <h2><%= PostTitle %></h2>
-                        <a href="#"> <mark class="author"><%= PostAuthor %></mark> </a>
+                        <a href="/?author=<%= PostAuthor%>"><mark class="author"><%= PostAuthor%></mark></a>
                         <br/><br/>
                         <div class="embed-responsive embed-responsive-16by9">
                             <%= PostMedia %>
@@ -28,7 +28,7 @@
                          <% previews.forEach(function(post) { %>
                         <div class="well other-posts-from-user" >
                         <a href="./article?ID=<%= post._id %>"> <h3><%= post.title %></h3></a>
-                        <a href="#"><mark class="author"><%= post.author%></mark></a>
+                        <a href="/?author=<%= post.author%>"><mark class="author"><%= post.author%></mark></a>
                         <br/>
                         <div class="embed-responsive embed-responsive-16by9">
                         <%= post.media %>
@@ -63,51 +63,26 @@
             <!-- Posted Comments -->
 
             <!-- Comment -->
-            <div class="row">
+             <% comments.forEach(function(comment) { %>
+
+               <div class="row">
                 <div class="  well col-xs-12 col-sm-10 col-md-8">
                     <div class="media">
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="http://placehold.it/64x64" alt=""/>
-                        </a>
                         <div class="media-body">
-                            <h4 class="media-heading">Name
-                                <small>March 16, 2015 at 9:30 PM</small>
+                            <h4 class="media-heading">
+                                <a href="/?author=<%= comment.author%>"><mark class="author"><%= comment.author%></mark></a>
+                                <small><%=comment.date %></small>
                             </h4>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            <%=comment.body %>
                         </div>
                     </div>
                     <br/>
-                    <!-- Comment -->
-                    <div class="row">
-                        <div class=" col-xs-12 col-sm-11 col-md-10">
-                            <div class="media">
-                                <a class="pull-left" href="#">
-                                    <img class="media-object" src="http://placehold.it/64x64" alt=""/>
-                                </a>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Name
-                                        <small>March 16, 2015 at 9:30 PM</small>
-                                    </h4>
-                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                                    <!-- Nested Comment -->
-                                    <div class="media">
-                                        <a class="pull-left" href="#">
-                                            <img class="media-object" src="http://placehold.it/64x64" alt=""/>
-                                        </a>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">Nested...Name
-                                                <small>March 16, 2015 at 9:35 PMM</small>
-                                            </h4>
-                                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                                        </div>
-                                    </div>
-                                    <!-- End Nested Comment -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div><!--/.container-->
+            </div>
+
+            <% }); %>
+
+                  </div><!--/.container-->
         </div>
     <% include ../partials/foot %>
         </body>

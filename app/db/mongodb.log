@@ -3729,3 +3729,847 @@
 2015-06-02T12:16:12.773+0100 [conn919] end connection 127.0.0.1:61003 (4 connections now open)
 2015-06-02T12:16:12.773+0100 [conn918] end connection 127.0.0.1:61002 (4 connections now open)
 2015-06-02T12:16:12.773+0100 [conn917] end connection 127.0.0.1:61001 (4 connections now open)
+2015-06-02T12:16:52.688+0100 [TTLMonitor] query local.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:1 nscannedObjects:1 keyUpdates:0 numYields:0 locks(micros) r:189878 nreturned:0 reslen:20 189ms
+2015-06-02T12:17:18.255+0100 [clientcursormon] mem (MB) res:3 virt:2800
+2015-06-02T12:17:18.277+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T12:17:18.277+0100 [clientcursormon]  connections:0
+2015-06-02T12:20:52.806+0100 [TTLMonitor] query local.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:1 nscannedObjects:1 keyUpdates:0 numYields:0 locks(micros) r:109385 nreturned:0 reslen:20 109ms
+2015-06-02T12:22:18.510+0100 [clientcursormon] mem (MB) res:2 virt:2800
+2015-06-02T12:22:18.526+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T12:22:18.526+0100 [clientcursormon]  connections:0
+2015-06-02T12:27:18.768+0100 [clientcursormon] mem (MB) res:2 virt:2800
+2015-06-02T12:27:18.831+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T12:27:18.842+0100 [clientcursormon]  connections:0
+2015-06-02T12:30:49.695+0100 [initandlisten] connection accepted from 127.0.0.1:61290 #922 (1 connection now open)
+2015-06-02T12:30:49.753+0100 [initandlisten] connection accepted from 127.0.0.1:61291 #923 (2 connections now open)
+2015-06-02T12:30:49.767+0100 [initandlisten] connection accepted from 127.0.0.1:61292 #924 (3 connections now open)
+2015-06-02T12:30:49.768+0100 [initandlisten] connection accepted from 127.0.0.1:61293 #925 (4 connections now open)
+2015-06-02T12:30:49.768+0100 [initandlisten] connection accepted from 127.0.0.1:61294 #926 (5 connections now open)
+2015-06-02T12:31:13.803+0100 [conn926] query songsphere.posts query: { $query: {}, orderby: { created: -1 } } planSummary: COLLSCAN, COLLSCAN cursorid:40381215244 ntoreturn:30 ntoskip:0 nscanned:38 nscannedObjects:38 keyUpdates:0 numYields:0 locks(micros) r:245299 nreturned:30 reslen:4783 245ms
+2015-06-02T12:31:13.848+0100 [conn926] killcursors  keyUpdates:0 numYields:0 locks(micros) r:133 26ms
+2015-06-02T12:31:15.142+0100 [conn924] update songsphere.sessions query: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" } update: { $set: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433244673969) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:1028301 1071ms
+2015-06-02T12:31:15.143+0100 [conn924] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" }, u: { $set: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433244673969) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 1144ms
+2015-06-02T12:31:19.147+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T12:31:19.147+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T12:31:19.147+0100 [clientcursormon]  connections:5
+2015-06-02T12:31:28.304+0100 [conn925] end connection 127.0.0.1:61293 (4 connections now open)
+2015-06-02T12:31:28.304+0100 [conn923] end connection 127.0.0.1:61291 (4 connections now open)
+2015-06-02T12:31:28.304+0100 [conn926] end connection 127.0.0.1:61294 (4 connections now open)
+2015-06-02T12:31:28.304+0100 [conn924] end connection 127.0.0.1:61292 (4 connections now open)
+2015-06-02T12:31:28.304+0100 [conn922] end connection 127.0.0.1:61290 (4 connections now open)
+2015-06-02T12:35:10.478+0100 [initandlisten] connection accepted from 127.0.0.1:61349 #927 (1 connection now open)
+2015-06-02T12:35:10.766+0100 [initandlisten] connection accepted from 127.0.0.1:61350 #928 (2 connections now open)
+2015-06-02T12:35:10.767+0100 [initandlisten] connection accepted from 127.0.0.1:61351 #929 (3 connections now open)
+2015-06-02T12:35:10.767+0100 [initandlisten] connection accepted from 127.0.0.1:61352 #930 (4 connections now open)
+2015-06-02T12:35:10.768+0100 [initandlisten] connection accepted from 127.0.0.1:61353 #931 (5 connections now open)
+2015-06-02T12:35:11.249+0100 [conn929] query songsphere.system.indexes query: { ns: "songsphere.sessions" } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:4 nscannedObjects:4 keyUpdates:0 numYields:0 locks(micros) r:116794 nreturned:2 reslen:224 116ms
+2015-06-02T12:36:19.390+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T12:36:19.401+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T12:36:19.401+0100 [clientcursormon]  connections:5
+2015-06-02T12:36:40.064+0100 [conn929] update songsphere.sessions query: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" } update: { $set: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433244999883) } } nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:122 127ms
+2015-06-02T12:36:40.101+0100 [conn929] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" }, u: { $set: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433244999883) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 217ms
+2015-06-02T12:37:53.505+0100 [TTLMonitor] query songsphere.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:4 nscannedObjects:4 keyUpdates:0 numYields:1 locks(micros) r:257956 nreturned:1 reslen:150 141ms
+2015-06-02T12:41:19.650+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T12:41:19.774+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T12:41:19.788+0100 [clientcursormon]  connections:5
+2015-06-02T12:46:20.012+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T12:46:20.084+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T12:46:20.084+0100 [clientcursormon]  connections:5
+2015-06-02T12:51:20.288+0100 [clientcursormon] mem (MB) res:2 virt:2803
+2015-06-02T12:51:20.297+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T12:51:20.298+0100 [clientcursormon]  connections:5
+2015-06-02T12:52:12.558+0100 [conn930] end connection 127.0.0.1:61352 (4 connections now open)
+2015-06-02T12:52:12.558+0100 [conn928] end connection 127.0.0.1:61350 (4 connections now open)
+2015-06-02T12:52:12.558+0100 [conn931] end connection 127.0.0.1:61353 (4 connections now open)
+2015-06-02T12:52:12.558+0100 [conn929] end connection 127.0.0.1:61351 (4 connections now open)
+2015-06-02T12:52:12.558+0100 [conn927] end connection 127.0.0.1:61349 (4 connections now open)
+2015-06-02T12:52:54.065+0100 [initandlisten] connection accepted from 127.0.0.1:61681 #932 (1 connection now open)
+2015-06-02T12:52:54.111+0100 [initandlisten] connection accepted from 127.0.0.1:61682 #933 (2 connections now open)
+2015-06-02T12:52:54.112+0100 [initandlisten] connection accepted from 127.0.0.1:61683 #934 (3 connections now open)
+2015-06-02T12:52:54.112+0100 [initandlisten] connection accepted from 127.0.0.1:61684 #935 (4 connections now open)
+2015-06-02T12:52:54.203+0100 [initandlisten] connection accepted from 127.0.0.1:61685 #936 (5 connections now open)
+2015-06-02T12:52:54.819+0100 [conn932] query songsphere.posts query: { $query: { author: "crabbe", _id: { $ne: ObjectId('556d89eb8ef910f0cf147f8d') } }, orderby: { created: -1 } } planSummary: IXSCAN { _id: 1 }, IXSCAN { _id: 1 } cursorid:39517132665 ntoreturn:3 ntoskip:0 nscanned:38 nscannedObjects:37 keyUpdates:0 numYields:0 locks(micros) r:144512 nreturned:3 reslen:570 144ms
+2015-06-02T12:52:54.876+0100 [conn932] killcursors  keyUpdates:0 numYields:0 locks(micros) r:56 53ms
+2015-06-02T12:52:55.475+0100 [conn935] update songsphere.sessions query: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" } update: { $set: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433245974903) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:262647 288ms
+2015-06-02T12:52:55.476+0100 [conn935] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" }, u: { $set: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433245974903) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 570ms
+2015-06-02T12:53:15.166+0100 [conn936] end connection 127.0.0.1:61685 (4 connections now open)
+2015-06-02T12:53:15.166+0100 [conn935] end connection 127.0.0.1:61684 (4 connections now open)
+2015-06-02T12:53:15.166+0100 [conn934] end connection 127.0.0.1:61683 (4 connections now open)
+2015-06-02T12:53:15.166+0100 [conn933] end connection 127.0.0.1:61682 (4 connections now open)
+2015-06-02T12:53:15.166+0100 [conn932] end connection 127.0.0.1:61681 (4 connections now open)
+2015-06-02T12:53:20.385+0100 [clientcursormon] mem (MB) res:3 virt:2800
+2015-06-02T12:53:20.385+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T12:53:20.386+0100 [clientcursormon]  connections:0
+2015-06-02T12:58:20.626+0100 [clientcursormon] mem (MB) res:3 virt:2800
+2015-06-02T12:58:20.752+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T12:58:20.753+0100 [clientcursormon]  connections:0
+2015-06-02T13:00:06.766+0100 [initandlisten] connection accepted from 127.0.0.1:61796 #937 (1 connection now open)
+2015-06-02T13:00:06.767+0100 [initandlisten] connection accepted from 127.0.0.1:61797 #938 (2 connections now open)
+2015-06-02T13:00:06.768+0100 [initandlisten] connection accepted from 127.0.0.1:61798 #939 (3 connections now open)
+2015-06-02T13:00:06.768+0100 [initandlisten] connection accepted from 127.0.0.1:61799 #940 (4 connections now open)
+2015-06-02T13:00:06.769+0100 [initandlisten] connection accepted from 127.0.0.1:61800 #941 (5 connections now open)
+2015-06-02T13:00:23.642+0100 [conn937] command songsphere.$cmd command: findAndModify { findandmodify: "posts", query: { _id: ObjectId('556d89eb8ef910f0cf147f8d') }, new: 1, remove: 0, upsert: 1, update: { $push: { comments: { author: "crabbe", body: "new coments", _id: ObjectId('556d9ad751c32537d2188fa4'), date: new Date(1433246423468) } }, $setOnInsert: { __v: 0 } }, writeConcern: { w: 1 } } update: { $push: { comments: { author: "crabbe", body: "new coments", _id: ObjectId('556d9ad751c32537d2188fa4'), date: new Date(1433246423468) } }, $setOnInsert: { __v: 0 } } nMatched:1 nModified:1 keyUpdates:0 numYields:0 locks(micros) w:119074 reslen:578 119ms
+2015-06-02T13:03:20.989+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T13:03:21.058+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T13:03:21.068+0100 [clientcursormon]  connections:5
+2015-06-02T13:04:58.118+0100 [conn938] update songsphere.sessions query: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" } update: { $set: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433246697030) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:87548 150ms
+2015-06-02T13:04:58.255+0100 [conn938] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" }, u: { $set: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433246697030) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 772ms
+2015-06-02T13:05:10.870+0100 [conn938] end connection 127.0.0.1:61797 (4 connections now open)
+2015-06-02T13:05:10.870+0100 [conn940] end connection 127.0.0.1:61799 (4 connections now open)
+2015-06-02T13:05:10.870+0100 [conn941] end connection 127.0.0.1:61800 (4 connections now open)
+2015-06-02T13:05:10.870+0100 [conn939] end connection 127.0.0.1:61798 (4 connections now open)
+2015-06-02T13:05:10.870+0100 [conn937] end connection 127.0.0.1:61796 (4 connections now open)
+2015-06-02T13:05:21.642+0100 [initandlisten] connection accepted from 127.0.0.1:61894 #942 (1 connection now open)
+2015-06-02T13:05:21.656+0100 [initandlisten] connection accepted from 127.0.0.1:61895 #943 (2 connections now open)
+2015-06-02T13:05:21.656+0100 [initandlisten] connection accepted from 127.0.0.1:61896 #944 (3 connections now open)
+2015-06-02T13:05:21.656+0100 [initandlisten] connection accepted from 127.0.0.1:61897 #945 (4 connections now open)
+2015-06-02T13:05:21.657+0100 [initandlisten] connection accepted from 127.0.0.1:61898 #946 (5 connections now open)
+2015-06-02T13:05:32.859+0100 [conn944] query songsphere.posts query: { $query: {}, orderby: { created: -1 } } planSummary: COLLSCAN, COLLSCAN cursorid:40559395477 ntoreturn:30 ntoskip:0 nscanned:38 nscannedObjects:38 keyUpdates:0 numYields:1 locks(micros) r:587405 nreturned:30 reslen:5033 295ms
+2015-06-02T13:05:33.019+0100 [conn944] killcursors  keyUpdates:0 numYields:0 locks(micros) r:52 152ms
+2015-06-02T13:05:50.553+0100 [conn946] end connection 127.0.0.1:61898 (4 connections now open)
+2015-06-02T13:05:50.554+0100 [conn944] end connection 127.0.0.1:61896 (4 connections now open)
+2015-06-02T13:05:50.554+0100 [conn945] end connection 127.0.0.1:61897 (4 connections now open)
+2015-06-02T13:05:50.554+0100 [conn943] end connection 127.0.0.1:61895 (4 connections now open)
+2015-06-02T13:05:50.554+0100 [conn942] end connection 127.0.0.1:61894 (4 connections now open)
+2015-06-02T13:08:21.308+0100 [clientcursormon] mem (MB) res:3 virt:2800
+2015-06-02T13:08:21.429+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T13:08:21.429+0100 [clientcursormon]  connections:0
+2015-06-02T13:08:53.774+0100 [TTLMonitor] query songsphere.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:4 nscannedObjects:4 keyUpdates:0 numYields:1 locks(micros) r:359224 nreturned:1 reslen:150 179ms
+2015-06-02T13:09:10.489+0100 [initandlisten] connection accepted from 127.0.0.1:61985 #947 (1 connection now open)
+2015-06-02T13:09:10.517+0100 [initandlisten] connection accepted from 127.0.0.1:61986 #948 (2 connections now open)
+2015-06-02T13:09:10.517+0100 [initandlisten] connection accepted from 127.0.0.1:61987 #949 (3 connections now open)
+2015-06-02T13:09:10.518+0100 [initandlisten] connection accepted from 127.0.0.1:61988 #950 (4 connections now open)
+2015-06-02T13:09:10.518+0100 [initandlisten] connection accepted from 127.0.0.1:61989 #951 (5 connections now open)
+2015-06-02T13:10:11.016+0100 [conn950] end connection 127.0.0.1:61988 (4 connections now open)
+2015-06-02T13:10:11.016+0100 [conn951] end connection 127.0.0.1:61989 (4 connections now open)
+2015-06-02T13:10:11.016+0100 [conn949] end connection 127.0.0.1:61987 (4 connections now open)
+2015-06-02T13:10:11.016+0100 [conn948] end connection 127.0.0.1:61986 (4 connections now open)
+2015-06-02T13:10:11.016+0100 [conn947] end connection 127.0.0.1:61985 (4 connections now open)
+2015-06-02T13:10:45.034+0100 [initandlisten] connection accepted from 127.0.0.1:62058 #952 (1 connection now open)
+2015-06-02T13:10:45.035+0100 [initandlisten] connection accepted from 127.0.0.1:62059 #953 (2 connections now open)
+2015-06-02T13:10:45.036+0100 [initandlisten] connection accepted from 127.0.0.1:62060 #954 (3 connections now open)
+2015-06-02T13:10:45.037+0100 [initandlisten] connection accepted from 127.0.0.1:62061 #955 (4 connections now open)
+2015-06-02T13:10:45.038+0100 [initandlisten] connection accepted from 127.0.0.1:62062 #956 (5 connections now open)
+2015-06-02T13:13:21.650+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T13:13:21.799+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T13:13:21.799+0100 [clientcursormon]  connections:5
+2015-06-02T13:18:22.022+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T13:18:22.153+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T13:18:22.153+0100 [clientcursormon]  connections:5
+2015-06-02T13:23:22.438+0100 [clientcursormon] mem (MB) res:2 virt:2803
+2015-06-02T13:23:22.576+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T13:23:22.576+0100 [clientcursormon]  connections:5
+2015-06-02T13:28:22.804+0100 [clientcursormon] mem (MB) res:2 virt:2803
+2015-06-02T13:28:22.824+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T13:28:22.824+0100 [clientcursormon]  connections:5
+2015-06-02T13:33:23.058+0100 [clientcursormon] mem (MB) res:2 virt:2803
+2015-06-02T13:33:23.074+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T13:33:23.074+0100 [clientcursormon]  connections:5
+2015-06-02T13:36:47.233+0100 [conn956] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN cursorid:38751392803 ntoreturn:30 ntoskip:0 nscanned:38 nscannedObjects:38 keyUpdates:0 numYields:1 locks(micros) r:373070 nreturned:30 reslen:8792 236ms
+2015-06-02T13:36:47.443+0100 [conn956] killcursors  keyUpdates:0 numYields:0 locks(micros) r:9410 136ms
+2015-06-02T13:36:49.053+0100 [conn954] update songsphere.sessions query: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" } update: { $set: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433248607581) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:645508 1006ms
+2015-06-02T13:36:49.078+0100 [conn954] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" }, u: { $set: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433248607581) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 1259ms
+2015-06-02T13:37:08.211+0100 [conn955] query songsphere.posts query: { $query: { author: "crabbe", _id: { $ne: ObjectId('556da3735017e8acd2b8d7ff') } }, orderby: { created: -1 } } planSummary: IXSCAN { _id: 1 }, IXSCAN { _id: 1 } cursorid:39011751130 ntoreturn:3 ntoskip:0 nscanned:39 nscannedObjects:38 keyUpdates:0 numYields:0 locks(micros) r:204057 nreturned:3 reslen:888 204ms
+2015-06-02T13:37:14.847+0100 [conn955] command songsphere.$cmd command: findAndModify { findandmodify: "posts", query: { _id: ObjectId('556da3735017e8acd2b8d7ff') }, new: 1, remove: 0, upsert: 1, update: { $push: { comments: { author: "crabbe", body: "comment", _id: ObjectId('556da37a5017e8acd2b8d800'), date: new Date(1433248634436) } }, $setOnInsert: { __v: 0 } }, writeConcern: { w: 1 } } update: { $push: { comments: { author: "crabbe", body: "comment", _id: ObjectId('556da37a5017e8acd2b8d800'), date: new Date(1433248634436) } }, $setOnInsert: { __v: 0 } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:0 numYields:0 locks(micros) w:306459 reslen:324 306ms
+2015-06-02T13:37:23.272+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T13:37:23.336+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T13:37:23.336+0100 [clientcursormon]  connections:5
+2015-06-02T13:37:54.397+0100 [conn953] update songsphere.sessions query: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" } update: { $set: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433248674286) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:194 109ms
+2015-06-02T13:37:54.397+0100 [TTLMonitor] query songsphere.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:4 nscannedObjects:4 keyUpdates:0 numYields:1 locks(micros) r:257793 nreturned:1 reslen:150 129ms
+2015-06-02T13:37:54.515+0100 [conn953] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" }, u: { $set: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433248674286) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 227ms
+2015-06-02T13:42:23.562+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T13:42:23.651+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T13:42:23.652+0100 [clientcursormon]  connections:5
+2015-06-02T13:47:23.891+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T13:47:23.962+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T13:47:23.962+0100 [clientcursormon]  connections:5
+2015-06-02T13:52:24.372+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T13:52:24.502+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T13:52:24.502+0100 [clientcursormon]  connections:5
+2015-06-02T13:57:25.010+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T13:57:25.147+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T13:57:25.147+0100 [clientcursormon]  connections:5
+2015-06-02T14:02:25.683+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T14:02:25.805+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T14:02:25.806+0100 [clientcursormon]  connections:5
+2015-06-02T14:57:12.891+0100 [clientcursormon] mem (MB) res:2 virt:2803
+2015-06-02T14:57:14.319+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T14:57:14.319+0100 [clientcursormon]  connections:5
+2015-06-02T15:02:14.650+0100 [clientcursormon] mem (MB) res:2 virt:2803
+2015-06-02T15:02:14.715+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T15:02:14.715+0100 [clientcursormon]  connections:5
+2015-06-02T15:07:14.949+0100 [clientcursormon] mem (MB) res:2 virt:2803
+2015-06-02T15:07:14.975+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T15:07:14.975+0100 [clientcursormon]  connections:5
+2015-06-02T15:13:05.301+0100 [clientcursormon] mem (MB) res:2 virt:2803
+2015-06-02T15:13:05.302+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T15:13:05.302+0100 [clientcursormon]  connections:5
+2015-06-02T16:04:03.909+0100 [clientcursormon] mem (MB) res:2 virt:2803
+2015-06-02T16:04:03.910+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T16:04:03.910+0100 [clientcursormon]  connections:5
+2015-06-02T16:07:11.275+0100 [conn954] end connection 127.0.0.1:62060 (4 connections now open)
+2015-06-02T16:07:11.275+0100 [conn956] end connection 127.0.0.1:62062 (4 connections now open)
+2015-06-02T16:07:11.275+0100 [conn955] end connection 127.0.0.1:62061 (4 connections now open)
+2015-06-02T16:07:11.275+0100 [conn952] end connection 127.0.0.1:62058 (4 connections now open)
+2015-06-02T16:07:11.275+0100 [conn953] end connection 127.0.0.1:62059 (4 connections now open)
+2015-06-02T16:07:17.627+0100 [initandlisten] connection accepted from 127.0.0.1:63305 #957 (1 connection now open)
+2015-06-02T16:07:17.647+0100 [initandlisten] connection accepted from 127.0.0.1:63306 #958 (2 connections now open)
+2015-06-02T16:07:17.648+0100 [initandlisten] connection accepted from 127.0.0.1:63307 #959 (3 connections now open)
+2015-06-02T16:07:17.682+0100 [initandlisten] connection accepted from 127.0.0.1:63308 #960 (4 connections now open)
+2015-06-02T16:07:17.683+0100 [initandlisten] connection accepted from 127.0.0.1:63309 #961 (5 connections now open)
+2015-06-02T16:07:22.555+0100 [conn960] query songsphere.sessions query: { sid: "73AHQHtxR-vYMrP3KHQz6D3MPwJYOBsG" } planSummary: COLLSCAN ntoskip:0 nscanned:0 nscannedObjects:0 keyUpdates:0 numYields:0 locks(micros) r:229736 nreturned:0 reslen:20 229ms
+2015-06-02T16:07:22.847+0100 [conn961] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN cursorid:39406740126 ntoreturn:30 ntoskip:0 nscanned:39 nscannedObjects:39 keyUpdates:0 numYields:0 locks(micros) r:192605 nreturned:30 reslen:8792 192ms
+2015-06-02T16:07:22.890+0100 [conn961] killcursors  keyUpdates:0 numYields:0 locks(micros) r:67 35ms
+2015-06-02T16:07:23.228+0100 [conn959] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "J2dYqLNKNyL4TbcNwY0h45mzFoU3T0u7" }, u: { $set: { sid: "J2dYqLNKNyL4TbcNwY0h45mzFoU3T0u7", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433257642966) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:106 258ms
+2015-06-02T16:08:04.201+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T16:08:04.320+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T16:08:04.320+0100 [clientcursormon]  connections:5
+2015-06-02T17:10:48.416+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T17:10:48.677+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T17:10:48.677+0100 [clientcursormon]  connections:5
+2015-06-02T17:14:38.295+0100 [TTLMonitor] query local.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:1 nscannedObjects:1 keyUpdates:0 numYields:0 locks(micros) r:293942 nreturned:0 reslen:20 293ms
+2015-06-02T17:14:38.571+0100 [TTLMonitor] query songsphere.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:4 nscannedObjects:4 keyUpdates:0 numYields:0 locks(micros) r:112422 nreturned:1 reslen:150 112ms
+2015-06-02T17:15:48.894+0100 [clientcursormon] mem (MB) res:2 virt:2803
+2015-06-02T17:15:48.912+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T17:15:48.913+0100 [clientcursormon]  connections:5
+2015-06-02T17:18:53.218+0100 [conn959] end connection 127.0.0.1:63307 (4 connections now open)
+2015-06-02T17:18:53.218+0100 [conn960] end connection 127.0.0.1:63308 (4 connections now open)
+2015-06-02T17:18:53.218+0100 [conn961] end connection 127.0.0.1:63309 (4 connections now open)
+2015-06-02T17:18:53.232+0100 [conn957] end connection 127.0.0.1:63305 (4 connections now open)
+2015-06-02T17:18:53.232+0100 [conn958] end connection 127.0.0.1:63306 (4 connections now open)
+2015-06-02T17:19:00.792+0100 [initandlisten] connection accepted from 127.0.0.1:63411 #962 (1 connection now open)
+2015-06-02T17:19:00.812+0100 [initandlisten] connection accepted from 127.0.0.1:63412 #963 (2 connections now open)
+2015-06-02T17:19:00.812+0100 [initandlisten] connection accepted from 127.0.0.1:63413 #964 (3 connections now open)
+2015-06-02T17:19:00.812+0100 [initandlisten] connection accepted from 127.0.0.1:63414 #965 (4 connections now open)
+2015-06-02T17:19:00.813+0100 [initandlisten] connection accepted from 127.0.0.1:63415 #966 (5 connections now open)
+2015-06-02T17:19:07.260+0100 [conn966] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN cursorid:40723367229 ntoreturn:30 ntoskip:0 nscanned:39 nscannedObjects:39 keyUpdates:0 numYields:0 locks(micros) r:317661 nreturned:30 reslen:8792 317ms
+2015-06-02T17:19:07.343+0100 [conn966] killcursors  keyUpdates:0 numYields:0 locks(micros) r:68 76ms
+2015-06-02T17:19:08.120+0100 [conn964] update songsphere.sessions query: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ" } update: { $set: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433261947497) } } nMatched:1 nModified:0 fastmodinsert:1 upsert:1 keyUpdates:0 numYields:0 locks(micros) w:95196 180ms
+2015-06-02T17:19:08.219+0100 [conn964] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ" }, u: { $set: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433261947497) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:106 615ms
+2015-06-02T17:19:22.322+0100 [conn962] update songsphere.sessions query: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ" } update: { $set: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433261961912) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:408657 408ms
+2015-06-02T17:19:22.323+0100 [conn962] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ" }, u: { $set: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433261961912) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 409ms
+2015-06-02T17:19:49.102+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T17:19:49.103+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T17:19:49.103+0100 [clientcursormon]  connections:5
+2015-06-02T17:20:06.407+0100 [conn965] end connection 127.0.0.1:63414 (4 connections now open)
+2015-06-02T17:20:06.408+0100 [conn966] end connection 127.0.0.1:63415 (4 connections now open)
+2015-06-02T17:20:06.408+0100 [conn964] end connection 127.0.0.1:63413 (4 connections now open)
+2015-06-02T17:20:06.408+0100 [conn962] end connection 127.0.0.1:63411 (4 connections now open)
+2015-06-02T17:20:06.408+0100 [conn963] end connection 127.0.0.1:63412 (4 connections now open)
+2015-06-02T17:20:10.847+0100 [initandlisten] connection accepted from 127.0.0.1:63445 #967 (1 connection now open)
+2015-06-02T17:20:10.848+0100 [initandlisten] connection accepted from 127.0.0.1:63446 #968 (2 connections now open)
+2015-06-02T17:20:10.849+0100 [initandlisten] connection accepted from 127.0.0.1:63447 #969 (3 connections now open)
+2015-06-02T17:20:10.850+0100 [initandlisten] connection accepted from 127.0.0.1:63448 #970 (4 connections now open)
+2015-06-02T17:20:10.851+0100 [initandlisten] connection accepted from 127.0.0.1:63449 #971 (5 connections now open)
+2015-06-02T17:20:15.790+0100 [conn971] query songsphere.posts query: { _id: ObjectId('5568c2478f9efdfd4f303eb6') } planSummary: IDHACK ntoskip:0 nscanned:1 nscannedObjects:1 idhack:1 keyUpdates:0 numYields:0 locks(micros) r:134154 nreturned:1 reslen:1024 134ms
+2015-06-02T17:20:16.069+0100 [conn967] query songsphere.posts query: { $query: { author: "Elliot Hogg", _id: { $ne: ObjectId('5568c2478f9efdfd4f303eb6') } }, orderby: { created: -1 } } planSummary: IXSCAN { _id: 1 }, IXSCAN { _id: 1 } ntoreturn:3 ntoskip:0 nscanned:78 nscannedObjects:76 keyUpdates:0 numYields:0 locks(micros) r:276110 nreturned:1 reslen:1248 276ms
+2015-06-02T17:23:55.472+0100 [conn971] end connection 127.0.0.1:63449 (4 connections now open)
+2015-06-02T17:23:55.472+0100 [conn970] end connection 127.0.0.1:63448 (4 connections now open)
+2015-06-02T17:23:55.472+0100 [conn969] end connection 127.0.0.1:63447 (4 connections now open)
+2015-06-02T17:23:55.472+0100 [conn968] end connection 127.0.0.1:63446 (4 connections now open)
+2015-06-02T17:23:55.472+0100 [conn967] end connection 127.0.0.1:63445 (4 connections now open)
+2015-06-02T17:24:04.188+0100 [initandlisten] connection accepted from 127.0.0.1:63473 #972 (1 connection now open)
+2015-06-02T17:24:04.191+0100 [initandlisten] connection accepted from 127.0.0.1:63474 #973 (2 connections now open)
+2015-06-02T17:24:04.192+0100 [initandlisten] connection accepted from 127.0.0.1:63475 #974 (3 connections now open)
+2015-06-02T17:24:04.193+0100 [initandlisten] connection accepted from 127.0.0.1:63476 #975 (4 connections now open)
+2015-06-02T17:24:04.194+0100 [initandlisten] connection accepted from 127.0.0.1:63477 #976 (5 connections now open)
+2015-06-02T17:24:30.894+0100 [conn976] end connection 127.0.0.1:63477 (4 connections now open)
+2015-06-02T17:24:30.894+0100 [conn975] end connection 127.0.0.1:63476 (4 connections now open)
+2015-06-02T17:24:30.894+0100 [conn974] end connection 127.0.0.1:63475 (4 connections now open)
+2015-06-02T17:24:30.894+0100 [conn973] end connection 127.0.0.1:63474 (4 connections now open)
+2015-06-02T17:24:30.894+0100 [conn972] end connection 127.0.0.1:63473 (4 connections now open)
+2015-06-02T17:24:36.502+0100 [initandlisten] connection accepted from 127.0.0.1:63484 #977 (1 connection now open)
+2015-06-02T17:24:36.521+0100 [initandlisten] connection accepted from 127.0.0.1:63485 #978 (2 connections now open)
+2015-06-02T17:24:36.521+0100 [initandlisten] connection accepted from 127.0.0.1:63486 #979 (3 connections now open)
+2015-06-02T17:24:36.522+0100 [initandlisten] connection accepted from 127.0.0.1:63487 #980 (4 connections now open)
+2015-06-02T17:24:36.522+0100 [initandlisten] connection accepted from 127.0.0.1:63488 #981 (5 connections now open)
+2015-06-02T17:24:49.065+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T17:24:49.089+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T17:24:49.090+0100 [clientcursormon]  connections:5
+2015-06-02T17:25:17.701+0100 [conn980] end connection 127.0.0.1:63487 (4 connections now open)
+2015-06-02T17:25:17.701+0100 [conn981] end connection 127.0.0.1:63488 (4 connections now open)
+2015-06-02T17:25:17.701+0100 [conn979] end connection 127.0.0.1:63486 (4 connections now open)
+2015-06-02T17:25:17.701+0100 [conn978] end connection 127.0.0.1:63485 (4 connections now open)
+2015-06-02T17:25:17.701+0100 [conn977] end connection 127.0.0.1:63484 (4 connections now open)
+2015-06-02T17:25:22.928+0100 [initandlisten] connection accepted from 127.0.0.1:63495 #982 (1 connection now open)
+2015-06-02T17:25:22.930+0100 [initandlisten] connection accepted from 127.0.0.1:63496 #983 (2 connections now open)
+2015-06-02T17:25:22.931+0100 [initandlisten] connection accepted from 127.0.0.1:63497 #984 (3 connections now open)
+2015-06-02T17:25:22.931+0100 [initandlisten] connection accepted from 127.0.0.1:63498 #985 (4 connections now open)
+2015-06-02T17:25:22.932+0100 [initandlisten] connection accepted from 127.0.0.1:63499 #986 (5 connections now open)
+2015-06-02T17:25:47.800+0100 [conn986] end connection 127.0.0.1:63499 (4 connections now open)
+2015-06-02T17:25:47.801+0100 [conn985] end connection 127.0.0.1:63498 (3 connections now open)
+2015-06-02T17:25:47.801+0100 [conn984] end connection 127.0.0.1:63497 (3 connections now open)
+2015-06-02T17:25:47.801+0100 [conn983] end connection 127.0.0.1:63496 (3 connections now open)
+2015-06-02T17:25:47.801+0100 [conn982] end connection 127.0.0.1:63495 (3 connections now open)
+2015-06-02T17:25:49.111+0100 [initandlisten] connection accepted from 127.0.0.1:63504 #987 (1 connection now open)
+2015-06-02T17:25:49.113+0100 [initandlisten] connection accepted from 127.0.0.1:63505 #988 (2 connections now open)
+2015-06-02T17:25:49.114+0100 [initandlisten] connection accepted from 127.0.0.1:63506 #989 (3 connections now open)
+2015-06-02T17:25:49.114+0100 [initandlisten] connection accepted from 127.0.0.1:63507 #990 (4 connections now open)
+2015-06-02T17:25:49.115+0100 [initandlisten] connection accepted from 127.0.0.1:63508 #991 (5 connections now open)
+2015-06-02T17:26:16.025+0100 [conn991] end connection 127.0.0.1:63508 (4 connections now open)
+2015-06-02T17:26:16.025+0100 [conn990] end connection 127.0.0.1:63507 (4 connections now open)
+2015-06-02T17:26:16.025+0100 [conn989] end connection 127.0.0.1:63506 (4 connections now open)
+2015-06-02T17:26:16.025+0100 [conn987] end connection 127.0.0.1:63504 (4 connections now open)
+2015-06-02T17:26:16.025+0100 [conn988] end connection 127.0.0.1:63505 (4 connections now open)
+2015-06-02T17:26:17.425+0100 [initandlisten] connection accepted from 127.0.0.1:63516 #992 (1 connection now open)
+2015-06-02T17:26:17.427+0100 [initandlisten] connection accepted from 127.0.0.1:63517 #993 (2 connections now open)
+2015-06-02T17:26:17.427+0100 [initandlisten] connection accepted from 127.0.0.1:63518 #994 (3 connections now open)
+2015-06-02T17:26:17.431+0100 [initandlisten] connection accepted from 127.0.0.1:63519 #995 (4 connections now open)
+2015-06-02T17:26:17.432+0100 [initandlisten] connection accepted from 127.0.0.1:63520 #996 (5 connections now open)
+2015-06-02T17:26:46.790+0100 [conn996] end connection 127.0.0.1:63520 (4 connections now open)
+2015-06-02T17:26:46.790+0100 [conn995] end connection 127.0.0.1:63519 (3 connections now open)
+2015-06-02T17:26:46.791+0100 [conn994] end connection 127.0.0.1:63518 (2 connections now open)
+2015-06-02T17:26:46.791+0100 [conn993] end connection 127.0.0.1:63517 (2 connections now open)
+2015-06-02T17:26:46.791+0100 [conn992] end connection 127.0.0.1:63516 (2 connections now open)
+2015-06-02T17:26:48.416+0100 [initandlisten] connection accepted from 127.0.0.1:63525 #997 (1 connection now open)
+2015-06-02T17:26:48.418+0100 [initandlisten] connection accepted from 127.0.0.1:63526 #998 (2 connections now open)
+2015-06-02T17:26:48.418+0100 [initandlisten] connection accepted from 127.0.0.1:63527 #999 (3 connections now open)
+2015-06-02T17:26:48.419+0100 [initandlisten] connection accepted from 127.0.0.1:63528 #1000 (4 connections now open)
+2015-06-02T17:26:48.420+0100 [initandlisten] connection accepted from 127.0.0.1:63529 #1001 (5 connections now open)
+2015-06-02T17:27:09.935+0100 [conn1001] end connection 127.0.0.1:63529 (4 connections now open)
+2015-06-02T17:27:09.936+0100 [conn1000] end connection 127.0.0.1:63528 (3 connections now open)
+2015-06-02T17:27:09.936+0100 [conn999] end connection 127.0.0.1:63527 (2 connections now open)
+2015-06-02T17:27:09.937+0100 [conn998] end connection 127.0.0.1:63526 (1 connection now open)
+2015-06-02T17:27:09.937+0100 [conn997] end connection 127.0.0.1:63525 (0 connections now open)
+2015-06-02T17:27:12.472+0100 [initandlisten] connection accepted from 127.0.0.1:63536 #1002 (1 connection now open)
+2015-06-02T17:27:12.473+0100 [initandlisten] connection accepted from 127.0.0.1:63537 #1003 (2 connections now open)
+2015-06-02T17:27:12.474+0100 [initandlisten] connection accepted from 127.0.0.1:63538 #1004 (3 connections now open)
+2015-06-02T17:27:12.478+0100 [initandlisten] connection accepted from 127.0.0.1:63539 #1005 (4 connections now open)
+2015-06-02T17:27:12.479+0100 [initandlisten] connection accepted from 127.0.0.1:63540 #1006 (5 connections now open)
+2015-06-02T17:27:29.787+0100 [conn1005] end connection 127.0.0.1:63539 (4 connections now open)
+2015-06-02T17:27:29.788+0100 [conn1006] end connection 127.0.0.1:63540 (4 connections now open)
+2015-06-02T17:27:29.788+0100 [conn1004] end connection 127.0.0.1:63538 (4 connections now open)
+2015-06-02T17:27:29.788+0100 [conn1003] end connection 127.0.0.1:63537 (3 connections now open)
+2015-06-02T17:27:29.788+0100 [conn1002] end connection 127.0.0.1:63536 (3 connections now open)
+2015-06-02T17:27:31.411+0100 [initandlisten] connection accepted from 127.0.0.1:63545 #1007 (1 connection now open)
+2015-06-02T17:27:31.413+0100 [initandlisten] connection accepted from 127.0.0.1:63546 #1008 (2 connections now open)
+2015-06-02T17:27:31.413+0100 [initandlisten] connection accepted from 127.0.0.1:63547 #1009 (3 connections now open)
+2015-06-02T17:27:31.414+0100 [initandlisten] connection accepted from 127.0.0.1:63548 #1010 (4 connections now open)
+2015-06-02T17:27:31.414+0100 [initandlisten] connection accepted from 127.0.0.1:63549 #1011 (5 connections now open)
+2015-06-02T17:29:49.300+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T17:29:49.430+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T17:29:49.430+0100 [clientcursormon]  connections:5
+2015-06-02T17:32:02.018+0100 [conn1011] end connection 127.0.0.1:63549 (4 connections now open)
+2015-06-02T17:32:02.018+0100 [conn1010] end connection 127.0.0.1:63548 (4 connections now open)
+2015-06-02T17:32:02.019+0100 [conn1009] end connection 127.0.0.1:63547 (4 connections now open)
+2015-06-02T17:32:02.019+0100 [conn1008] end connection 127.0.0.1:63546 (4 connections now open)
+2015-06-02T17:32:02.019+0100 [conn1007] end connection 127.0.0.1:63545 (4 connections now open)
+2015-06-02T17:32:08.043+0100 [initandlisten] connection accepted from 127.0.0.1:63573 #1012 (1 connection now open)
+2015-06-02T17:32:08.046+0100 [initandlisten] connection accepted from 127.0.0.1:63574 #1013 (2 connections now open)
+2015-06-02T17:32:08.047+0100 [initandlisten] connection accepted from 127.0.0.1:63575 #1014 (3 connections now open)
+2015-06-02T17:32:08.048+0100 [initandlisten] connection accepted from 127.0.0.1:63576 #1015 (4 connections now open)
+2015-06-02T17:32:08.048+0100 [initandlisten] connection accepted from 127.0.0.1:63577 #1016 (5 connections now open)
+2015-06-02T17:32:49.555+0100 [clientcursormon] mem (MB) res:4 virt:2803
+2015-06-02T17:32:49.625+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T17:32:49.625+0100 [clientcursormon]  connections:5
+2015-06-02T17:35:38.253+0100 [conn1016] end connection 127.0.0.1:63577 (4 connections now open)
+2015-06-02T17:35:38.253+0100 [conn1015] end connection 127.0.0.1:63576 (4 connections now open)
+2015-06-02T17:35:38.253+0100 [conn1014] end connection 127.0.0.1:63575 (4 connections now open)
+2015-06-02T17:35:38.253+0100 [conn1013] end connection 127.0.0.1:63574 (4 connections now open)
+2015-06-02T17:35:38.254+0100 [conn1012] end connection 127.0.0.1:63573 (4 connections now open)
+2015-06-02T17:35:52.265+0100 [initandlisten] connection accepted from 127.0.0.1:63595 #1017 (1 connection now open)
+2015-06-02T17:35:52.285+0100 [initandlisten] connection accepted from 127.0.0.1:63596 #1018 (2 connections now open)
+2015-06-02T17:35:52.286+0100 [initandlisten] connection accepted from 127.0.0.1:63597 #1019 (3 connections now open)
+2015-06-02T17:35:52.287+0100 [initandlisten] connection accepted from 127.0.0.1:63598 #1020 (4 connections now open)
+2015-06-02T17:35:52.287+0100 [initandlisten] connection accepted from 127.0.0.1:63599 #1021 (5 connections now open)
+2015-06-02T17:37:49.865+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T17:37:49.930+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T17:37:49.930+0100 [clientcursormon]  connections:5
+2015-06-02T17:38:29.275+0100 [conn1020] end connection 127.0.0.1:63598 (4 connections now open)
+2015-06-02T17:38:29.275+0100 [conn1021] end connection 127.0.0.1:63599 (4 connections now open)
+2015-06-02T17:38:29.275+0100 [conn1019] end connection 127.0.0.1:63597 (4 connections now open)
+2015-06-02T17:38:29.275+0100 [conn1018] end connection 127.0.0.1:63596 (4 connections now open)
+2015-06-02T17:38:29.275+0100 [conn1017] end connection 127.0.0.1:63595 (4 connections now open)
+2015-06-02T17:38:42.992+0100 [initandlisten] connection accepted from 127.0.0.1:63622 #1022 (1 connection now open)
+2015-06-02T17:38:43.011+0100 [initandlisten] connection accepted from 127.0.0.1:63623 #1023 (2 connections now open)
+2015-06-02T17:38:43.011+0100 [initandlisten] connection accepted from 127.0.0.1:63626 #1024 (3 connections now open)
+2015-06-02T17:38:43.011+0100 [initandlisten] connection accepted from 127.0.0.1:63627 #1025 (4 connections now open)
+2015-06-02T17:38:43.011+0100 [initandlisten] connection accepted from 127.0.0.1:63628 #1026 (5 connections now open)
+2015-06-02T17:39:31.305+0100 [conn1026] end connection 127.0.0.1:63628 (4 connections now open)
+2015-06-02T17:39:31.306+0100 [conn1025] end connection 127.0.0.1:63627 (4 connections now open)
+2015-06-02T17:39:31.306+0100 [conn1023] end connection 127.0.0.1:63623 (4 connections now open)
+2015-06-02T17:39:31.306+0100 [conn1024] end connection 127.0.0.1:63626 (4 connections now open)
+2015-06-02T17:39:31.306+0100 [conn1022] end connection 127.0.0.1:63622 (4 connections now open)
+2015-06-02T17:39:36.094+0100 [initandlisten] connection accepted from 127.0.0.1:63645 #1027 (1 connection now open)
+2015-06-02T17:39:36.096+0100 [initandlisten] connection accepted from 127.0.0.1:63646 #1028 (2 connections now open)
+2015-06-02T17:39:36.097+0100 [initandlisten] connection accepted from 127.0.0.1:63647 #1029 (3 connections now open)
+2015-06-02T17:39:36.098+0100 [initandlisten] connection accepted from 127.0.0.1:63648 #1030 (4 connections now open)
+2015-06-02T17:39:36.099+0100 [initandlisten] connection accepted from 127.0.0.1:63649 #1031 (5 connections now open)
+2015-06-02T17:40:26.191+0100 [conn1031] end connection 127.0.0.1:63649 (4 connections now open)
+2015-06-02T17:40:26.191+0100 [conn1030] end connection 127.0.0.1:63648 (4 connections now open)
+2015-06-02T17:40:26.191+0100 [conn1029] end connection 127.0.0.1:63647 (4 connections now open)
+2015-06-02T17:40:26.191+0100 [conn1028] end connection 127.0.0.1:63646 (4 connections now open)
+2015-06-02T17:40:26.191+0100 [conn1027] end connection 127.0.0.1:63645 (4 connections now open)
+2015-06-02T17:40:35.826+0100 [initandlisten] connection accepted from 127.0.0.1:63681 #1032 (1 connection now open)
+2015-06-02T17:40:35.827+0100 [initandlisten] connection accepted from 127.0.0.1:63682 #1033 (2 connections now open)
+2015-06-02T17:40:35.828+0100 [initandlisten] connection accepted from 127.0.0.1:63683 #1034 (3 connections now open)
+2015-06-02T17:40:35.829+0100 [initandlisten] connection accepted from 127.0.0.1:63684 #1035 (4 connections now open)
+2015-06-02T17:40:35.830+0100 [initandlisten] connection accepted from 127.0.0.1:63685 #1036 (5 connections now open)
+2015-06-02T17:40:41.503+0100 [conn1036] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN cursorid:39018128193 ntoreturn:30 ntoskip:0 nscanned:39 nscannedObjects:39 keyUpdates:0 numYields:0 locks(micros) r:226213 nreturned:30 reslen:8792 226ms
+2015-06-02T17:42:50.169+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T17:42:50.189+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T17:42:50.190+0100 [clientcursormon]  connections:5
+2015-06-02T18:01:01.567+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T18:01:03.500+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T18:01:03.501+0100 [clientcursormon]  connections:5
+2015-06-02T18:04:22.343+0100 [conn1032] end connection 127.0.0.1:63681 (4 connections now open)
+2015-06-02T18:04:22.343+0100 [conn1034] end connection 127.0.0.1:63683 (4 connections now open)
+2015-06-02T18:04:22.343+0100 [conn1033] end connection 127.0.0.1:63682 (4 connections now open)
+2015-06-02T18:04:22.343+0100 [conn1035] end connection 127.0.0.1:63684 (4 connections now open)
+2015-06-02T18:04:22.343+0100 [conn1036] end connection 127.0.0.1:63685 (4 connections now open)
+2015-06-02T18:04:32.057+0100 [initandlisten] connection accepted from 127.0.0.1:63755 #1037 (1 connection now open)
+2015-06-02T18:04:32.104+0100 [initandlisten] connection accepted from 127.0.0.1:63756 #1038 (2 connections now open)
+2015-06-02T18:04:32.105+0100 [initandlisten] connection accepted from 127.0.0.1:63757 #1039 (3 connections now open)
+2015-06-02T18:04:32.105+0100 [initandlisten] connection accepted from 127.0.0.1:63758 #1040 (4 connections now open)
+2015-06-02T18:04:32.106+0100 [initandlisten] connection accepted from 127.0.0.1:63759 #1041 (5 connections now open)
+2015-06-02T18:04:51.305+0100 [conn1037] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ" }, u: { $set: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433264691077) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 178ms
+2015-06-02T18:05:17.815+0100 [conn1037] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN cursorid:39645108751 ntoreturn:30 ntoskip:0 nscanned:39 nscannedObjects:39 keyUpdates:0 numYields:0 locks(micros) r:263232 nreturned:30 reslen:8792 263ms
+2015-06-02T18:05:17.867+0100 [conn1037] killcursors  keyUpdates:0 numYields:0 locks(micros) r:46 22ms
+2015-06-02T18:06:03.720+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T18:06:03.847+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T18:06:03.848+0100 [clientcursormon]  connections:5
+2015-06-02T18:06:47.555+0100 [conn1041] end connection 127.0.0.1:63759 (4 connections now open)
+2015-06-02T18:06:47.556+0100 [conn1040] end connection 127.0.0.1:63758 (4 connections now open)
+2015-06-02T18:06:47.556+0100 [conn1039] end connection 127.0.0.1:63757 (4 connections now open)
+2015-06-02T18:06:47.556+0100 [conn1038] end connection 127.0.0.1:63756 (3 connections now open)
+2015-06-02T18:06:47.556+0100 [conn1037] end connection 127.0.0.1:63755 (3 connections now open)
+2015-06-02T18:06:55.531+0100 [initandlisten] connection accepted from 127.0.0.1:63823 #1042 (1 connection now open)
+2015-06-02T18:06:55.551+0100 [initandlisten] connection accepted from 127.0.0.1:63824 #1043 (2 connections now open)
+2015-06-02T18:06:55.552+0100 [initandlisten] connection accepted from 127.0.0.1:63825 #1044 (3 connections now open)
+2015-06-02T18:06:55.552+0100 [initandlisten] connection accepted from 127.0.0.1:63826 #1045 (4 connections now open)
+2015-06-02T18:06:55.553+0100 [initandlisten] connection accepted from 127.0.0.1:63827 #1046 (5 connections now open)
+2015-06-02T18:07:22.177+0100 [conn1046] end connection 127.0.0.1:63827 (4 connections now open)
+2015-06-02T18:07:22.178+0100 [conn1045] end connection 127.0.0.1:63826 (4 connections now open)
+2015-06-02T18:07:22.178+0100 [conn1044] end connection 127.0.0.1:63825 (4 connections now open)
+2015-06-02T18:07:22.178+0100 [conn1043] end connection 127.0.0.1:63824 (4 connections now open)
+2015-06-02T18:07:22.178+0100 [conn1042] end connection 127.0.0.1:63823 (4 connections now open)
+2015-06-02T18:07:30.337+0100 [initandlisten] connection accepted from 127.0.0.1:63843 #1047 (1 connection now open)
+2015-06-02T18:07:30.365+0100 [initandlisten] connection accepted from 127.0.0.1:63844 #1048 (2 connections now open)
+2015-06-02T18:07:30.366+0100 [initandlisten] connection accepted from 127.0.0.1:63845 #1049 (3 connections now open)
+2015-06-02T18:07:30.366+0100 [initandlisten] connection accepted from 127.0.0.1:63846 #1050 (4 connections now open)
+2015-06-02T18:07:30.367+0100 [initandlisten] connection accepted from 127.0.0.1:63847 #1051 (5 connections now open)
+2015-06-02T18:11:04.074+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T18:11:04.074+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T18:11:04.075+0100 [clientcursormon]  connections:5
+2015-06-02T18:11:08.880+0100 [conn1050] end connection 127.0.0.1:63846 (4 connections now open)
+2015-06-02T18:11:08.881+0100 [conn1049] end connection 127.0.0.1:63845 (3 connections now open)
+2015-06-02T18:11:08.881+0100 [conn1051] end connection 127.0.0.1:63847 (3 connections now open)
+2015-06-02T18:11:08.881+0100 [conn1048] end connection 127.0.0.1:63844 (3 connections now open)
+2015-06-02T18:11:08.881+0100 [conn1047] end connection 127.0.0.1:63843 (3 connections now open)
+2015-06-02T18:11:11.760+0100 [initandlisten] connection accepted from 127.0.0.1:63863 #1052 (1 connection now open)
+2015-06-02T18:11:11.762+0100 [initandlisten] connection accepted from 127.0.0.1:63864 #1053 (2 connections now open)
+2015-06-02T18:11:11.763+0100 [initandlisten] connection accepted from 127.0.0.1:63865 #1054 (3 connections now open)
+2015-06-02T18:11:11.764+0100 [initandlisten] connection accepted from 127.0.0.1:63866 #1055 (4 connections now open)
+2015-06-02T18:11:11.764+0100 [initandlisten] connection accepted from 127.0.0.1:63867 #1056 (5 connections now open)
+2015-06-02T18:11:39.375+0100 [conn1055] end connection 127.0.0.1:63866 (4 connections now open)
+2015-06-02T18:11:39.375+0100 [conn1056] end connection 127.0.0.1:63867 (3 connections now open)
+2015-06-02T18:11:39.375+0100 [conn1054] end connection 127.0.0.1:63865 (3 connections now open)
+2015-06-02T18:11:39.375+0100 [conn1053] end connection 127.0.0.1:63864 (3 connections now open)
+2015-06-02T18:11:39.375+0100 [conn1052] end connection 127.0.0.1:63863 (3 connections now open)
+2015-06-02T18:11:40.573+0100 [initandlisten] connection accepted from 127.0.0.1:63874 #1057 (1 connection now open)
+2015-06-02T18:11:40.575+0100 [initandlisten] connection accepted from 127.0.0.1:63875 #1058 (2 connections now open)
+2015-06-02T18:11:40.575+0100 [initandlisten] connection accepted from 127.0.0.1:63876 #1059 (3 connections now open)
+2015-06-02T18:11:40.576+0100 [initandlisten] connection accepted from 127.0.0.1:63877 #1060 (4 connections now open)
+2015-06-02T18:11:40.577+0100 [initandlisten] connection accepted from 127.0.0.1:63878 #1061 (5 connections now open)
+2015-06-02T18:11:42.592+0100 [conn1061] query songsphere.posts query: { $query: { tags: { $in: [ "t1", "t2" ] } }, orderby: { created: -1 } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:39 nscannedObjects:39 scanAndOrder:1 keyUpdates:0 numYields:0 locks(micros) r:161742 nreturned:0 reslen:20 161ms
+2015-06-02T18:12:07.318+0100 [conn1061] end connection 127.0.0.1:63878 (4 connections now open)
+2015-06-02T18:12:07.318+0100 [conn1060] end connection 127.0.0.1:63877 (4 connections now open)
+2015-06-02T18:12:07.318+0100 [conn1059] end connection 127.0.0.1:63876 (4 connections now open)
+2015-06-02T18:12:07.318+0100 [conn1057] end connection 127.0.0.1:63874 (4 connections now open)
+2015-06-02T18:12:07.318+0100 [conn1058] end connection 127.0.0.1:63875 (4 connections now open)
+2015-06-02T18:12:09.271+0100 [initandlisten] connection accepted from 127.0.0.1:63907 #1062 (1 connection now open)
+2015-06-02T18:12:09.273+0100 [initandlisten] connection accepted from 127.0.0.1:63908 #1063 (2 connections now open)
+2015-06-02T18:12:09.273+0100 [initandlisten] connection accepted from 127.0.0.1:63909 #1064 (3 connections now open)
+2015-06-02T18:12:09.274+0100 [initandlisten] connection accepted from 127.0.0.1:63910 #1065 (4 connections now open)
+2015-06-02T18:12:09.275+0100 [initandlisten] connection accepted from 127.0.0.1:63911 #1066 (5 connections now open)
+2015-06-02T18:12:21.082+0100 [conn1064] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ $query: { tags: { $in: "house" } }, orderby: { created: -1 } }
+2015-06-02T18:12:21.083+0100 [conn1064] query songsphere.posts query: { $query: { tags: { $in: "house" } }, orderby: { created: -1 } } ntoreturn:0 keyUpdates:0 exception: Can't canonicalize query: BadValue $in needs an array code:17287 numYields:0 locks(micros) r:195323 reslen:99 290ms
+2015-06-02T18:12:21.160+0100 [conn1065] end connection 127.0.0.1:63910 (4 connections now open)
+2015-06-02T18:12:21.160+0100 [conn1066] end connection 127.0.0.1:63911 (4 connections now open)
+2015-06-02T18:12:21.160+0100 [conn1064] end connection 127.0.0.1:63909 (4 connections now open)
+2015-06-02T18:12:21.160+0100 [conn1062] end connection 127.0.0.1:63907 (4 connections now open)
+2015-06-02T18:12:21.221+0100 [conn1063] update songsphere.sessions query: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ" } update: { $set: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433265140820) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:196 399ms
+2015-06-02T18:12:21.221+0100 [conn1063] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ" }, u: { $set: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433265140820) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 400ms
+2015-06-02T18:12:21.222+0100 [conn1063] end connection 127.0.0.1:63908 (0 connections now open)
+2015-06-02T18:13:04.038+0100 [initandlisten] connection accepted from 127.0.0.1:63958 #1067 (1 connection now open)
+2015-06-02T18:13:04.039+0100 [initandlisten] connection accepted from 127.0.0.1:63959 #1068 (2 connections now open)
+2015-06-02T18:13:04.040+0100 [initandlisten] connection accepted from 127.0.0.1:63960 #1069 (3 connections now open)
+2015-06-02T18:13:04.041+0100 [initandlisten] connection accepted from 127.0.0.1:63961 #1070 (4 connections now open)
+2015-06-02T18:13:04.041+0100 [initandlisten] connection accepted from 127.0.0.1:63962 #1071 (5 connections now open)
+2015-06-02T18:13:10.329+0100 [conn1071] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ $query: { tags: { $in: "Electronic" } }, orderby: { created: -1 } }
+2015-06-02T18:13:21.037+0100 [conn1067] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ $query: { tags: { $in: "The Humble Bee" } }, orderby: { created: -1 } }
+2015-06-02T18:14:04.203+0100 [clientcursormon] mem (MB) res:4 virt:2803
+2015-06-02T18:14:04.204+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T18:14:04.204+0100 [clientcursormon]  connections:5
+2015-06-02T18:19:05.279+0100 [clientcursormon] mem (MB) res:4 virt:2803
+2015-06-02T18:19:05.352+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T18:19:05.352+0100 [clientcursormon]  connections:5
+2015-06-02T18:24:05.593+0100 [clientcursormon] mem (MB) res:4 virt:2803
+2015-06-02T18:24:05.660+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T18:24:05.660+0100 [clientcursormon]  connections:5
+2015-06-02T18:28:09.094+0100 [conn1071] end connection 127.0.0.1:63962 (4 connections now open)
+2015-06-02T18:28:09.094+0100 [conn1070] end connection 127.0.0.1:63961 (4 connections now open)
+2015-06-02T18:28:09.094+0100 [conn1069] end connection 127.0.0.1:63960 (4 connections now open)
+2015-06-02T18:28:09.094+0100 [conn1068] end connection 127.0.0.1:63959 (4 connections now open)
+2015-06-02T18:28:09.094+0100 [conn1067] end connection 127.0.0.1:63958 (4 connections now open)
+2015-06-02T18:28:14.394+0100 [initandlisten] connection accepted from 127.0.0.1:64183 #1072 (1 connection now open)
+2015-06-02T18:28:14.396+0100 [initandlisten] connection accepted from 127.0.0.1:64184 #1073 (2 connections now open)
+2015-06-02T18:28:14.397+0100 [initandlisten] connection accepted from 127.0.0.1:64185 #1074 (3 connections now open)
+2015-06-02T18:28:14.398+0100 [initandlisten] connection accepted from 127.0.0.1:64186 #1075 (4 connections now open)
+2015-06-02T18:28:14.398+0100 [initandlisten] connection accepted from 127.0.0.1:64187 #1076 (5 connections now open)
+2015-06-02T18:28:47.075+0100 [conn1073] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ $query: { tags: { $in: "House" } }, orderby: { created: -1 } }
+2015-06-02T18:28:47.320+0100 [conn1076] end connection 127.0.0.1:64187 (4 connections now open)
+2015-06-02T18:28:47.325+0100 [conn1075] end connection 127.0.0.1:64186 (3 connections now open)
+2015-06-02T18:28:47.339+0100 [conn1074] end connection 127.0.0.1:64185 (2 connections now open)
+2015-06-02T18:28:47.339+0100 [conn1073] end connection 127.0.0.1:64184 (2 connections now open)
+2015-06-02T18:28:47.461+0100 [conn1072] update songsphere.sessions query: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ" } update: { $set: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433266127310) } } nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:105 150ms
+2015-06-02T18:28:47.505+0100 [conn1072] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ" }, u: { $set: { sid: "LX9E81f0Z-KLdCScRymv78Z5kqM36JsQ", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433266127310) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 194ms
+2015-06-02T18:28:47.505+0100 [conn1072] end connection 127.0.0.1:64183 (0 connections now open)
+2015-06-02T18:29:05.902+0100 [clientcursormon] mem (MB) res:3 virt:2800
+2015-06-02T18:29:05.975+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T18:29:05.976+0100 [clientcursormon]  connections:0
+2015-06-02T18:34:06.191+0100 [clientcursormon] mem (MB) res:3 virt:2800
+2015-06-02T18:34:06.318+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T18:34:06.319+0100 [clientcursormon]  connections:0
+2015-06-02T18:39:05.094+0100 [initandlisten] connection accepted from 127.0.0.1:64277 #1077 (1 connection now open)
+2015-06-02T18:39:05.113+0100 [initandlisten] connection accepted from 127.0.0.1:64278 #1078 (2 connections now open)
+2015-06-02T18:39:05.114+0100 [initandlisten] connection accepted from 127.0.0.1:64279 #1079 (3 connections now open)
+2015-06-02T18:39:05.114+0100 [initandlisten] connection accepted from 127.0.0.1:64280 #1080 (4 connections now open)
+2015-06-02T18:39:05.114+0100 [initandlisten] connection accepted from 127.0.0.1:64281 #1081 (5 connections now open)
+2015-06-02T18:39:06.512+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T18:39:06.512+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T18:39:06.512+0100 [clientcursormon]  connections:5
+2015-06-02T18:41:06.599+0100 [clientcursormon] mem (MB) res:4 virt:2803
+2015-06-02T18:41:06.807+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T18:41:06.808+0100 [clientcursormon]  connections:5
+2015-06-02T19:52:15.811+0100 [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 49ms
+2015-06-02T19:52:18.792+0100 [PeriodicTaskRunner] task: WriteBackManager::cleaner took: 252ms
+2015-06-02T19:52:21.536+0100 [TTLMonitor] query admin.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: EOF ntoreturn:0 ntoskip:0 nscanned:0 nscannedObjects:0 keyUpdates:0 numYields:0 locks(micros) r:2373148 nreturned:0 reslen:20 2258ms
+2015-06-02T19:52:27.140+0100 [TTLMonitor] query local.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:1 nscannedObjects:1 keyUpdates:0 numYields:2 locks(micros) r:7791076 nreturned:0 reslen:20 4056ms
+2015-06-02T19:52:31.197+0100 [TTLMonitor] query songsphere.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:4 nscannedObjects:4 keyUpdates:0 numYields:0 locks(micros) r:614073 nreturned:1 reslen:150 614ms
+2015-06-02T19:52:35.633+0100 [clientcursormon] mem (MB) res:2 virt:2803
+2015-06-02T19:52:37.502+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T19:52:37.741+0100 [clientcursormon]  connections:5
+2015-06-02T19:53:39.461+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T19:53:39.787+0100 [TTLMonitor] query local.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:1 nscannedObjects:1 keyUpdates:0 numYields:1 locks(micros) r:595824 nreturned:0 reslen:20 298ms
+2015-06-02T19:53:39.864+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T19:53:40.034+0100 [TTLMonitor] query songsphere.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:4 nscannedObjects:4 keyUpdates:0 numYields:0 locks(micros) r:168660 nreturned:1 reslen:150 168ms
+2015-06-02T19:53:40.258+0100 [clientcursormon]  connections:5
+2015-06-02T19:57:23.684+0100 [conn1079] end connection 127.0.0.1:64279 (4 connections now open)
+2015-06-02T19:57:23.684+0100 [conn1080] end connection 127.0.0.1:64280 (4 connections now open)
+2015-06-02T19:57:23.684+0100 [conn1081] end connection 127.0.0.1:64281 (4 connections now open)
+2015-06-02T19:57:23.684+0100 [conn1078] end connection 127.0.0.1:64278 (4 connections now open)
+2015-06-02T19:57:23.686+0100 [conn1077] end connection 127.0.0.1:64277 (4 connections now open)
+2015-06-02T19:57:30.449+0100 [initandlisten] connection accepted from 127.0.0.1:64349 #1082 (1 connection now open)
+2015-06-02T19:57:30.451+0100 [initandlisten] connection accepted from 127.0.0.1:64350 #1083 (2 connections now open)
+2015-06-02T19:57:30.452+0100 [initandlisten] connection accepted from 127.0.0.1:64351 #1084 (3 connections now open)
+2015-06-02T19:57:30.453+0100 [initandlisten] connection accepted from 127.0.0.1:64352 #1085 (4 connections now open)
+2015-06-02T19:57:30.453+0100 [initandlisten] connection accepted from 127.0.0.1:64353 #1086 (5 connections now open)
+2015-06-02T19:57:34.894+0100 [conn1084] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433271454774) } } nMatched:1 nModified:0 fastmodinsert:1 upsert:1 keyUpdates:0 numYields:0 locks(micros) w:114454 114ms
+2015-06-02T19:57:35.070+0100 [conn1084] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433271454774) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:106 290ms
+2015-06-02T19:58:05.265+0100 [conn1086] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ $query: { tags: { $in: "Experimental" } }, orderby: { created: -1 } }
+2015-06-02T19:58:05.279+0100 [conn1086] query songsphere.posts query: { $query: { tags: { $in: "Experimental" } }, orderby: { created: -1 } } ntoreturn:0 keyUpdates:0 exception: Can't canonicalize query: BadValue $in needs an array code:17287 numYields:0 locks(micros) r:208920 reslen:99 240ms
+2015-06-02T19:58:05.372+0100 [conn1086] end connection 127.0.0.1:64353 (4 connections now open)
+2015-06-02T19:58:05.373+0100 [conn1085] end connection 127.0.0.1:64352 (3 connections now open)
+2015-06-02T19:58:05.373+0100 [conn1084] end connection 127.0.0.1:64351 (3 connections now open)
+2015-06-02T19:58:05.373+0100 [conn1083] end connection 127.0.0.1:64350 (3 connections now open)
+2015-06-02T19:58:05.373+0100 [conn1082] end connection 127.0.0.1:64349 (3 connections now open)
+2015-06-02T19:58:38.016+0100 [initandlisten] connection accepted from 127.0.0.1:64378 #1087 (1 connection now open)
+2015-06-02T19:58:38.034+0100 [initandlisten] connection accepted from 127.0.0.1:64379 #1088 (2 connections now open)
+2015-06-02T19:58:38.034+0100 [initandlisten] connection accepted from 127.0.0.1:64380 #1089 (3 connections now open)
+2015-06-02T19:58:38.035+0100 [initandlisten] connection accepted from 127.0.0.1:64381 #1090 (4 connections now open)
+2015-06-02T19:58:38.036+0100 [initandlisten] connection accepted from 127.0.0.1:64382 #1091 (5 connections now open)
+2015-06-02T19:58:40.845+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T19:58:40.845+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T19:58:40.846+0100 [clientcursormon]  connections:5
+2015-06-02T19:58:43.547+0100 [conn1088] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433271523407) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:214 139ms
+2015-06-02T19:58:43.547+0100 [conn1089] query songsphere.posts query: { $query: { tags: { $in: [ "t1", "t2" ] } }, orderby: { created: -1 } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:39 nscannedObjects:39 scanAndOrder:1 keyUpdates:0 numYields:1 locks(micros) r:307780 nreturned:0 reslen:20 154ms
+2015-06-02T19:58:43.673+0100 [conn1088] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433271523407) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 265ms
+2015-06-02T19:59:40.895+0100 [clientcursormon] mem (MB) res:4 virt:2803
+2015-06-02T19:59:41.023+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T19:59:41.023+0100 [clientcursormon]  connections:5
+2015-06-02T20:04:06.237+0100 [conn1091] end connection 127.0.0.1:64382 (4 connections now open)
+2015-06-02T20:04:06.237+0100 [conn1090] end connection 127.0.0.1:64381 (4 connections now open)
+2015-06-02T20:04:06.237+0100 [conn1089] end connection 127.0.0.1:64380 (4 connections now open)
+2015-06-02T20:04:06.237+0100 [conn1088] end connection 127.0.0.1:64379 (4 connections now open)
+2015-06-02T20:04:06.237+0100 [conn1087] end connection 127.0.0.1:64378 (4 connections now open)
+2015-06-02T20:04:12.100+0100 [initandlisten] connection accepted from 127.0.0.1:64445 #1092 (1 connection now open)
+2015-06-02T20:04:12.102+0100 [initandlisten] connection accepted from 127.0.0.1:64446 #1093 (2 connections now open)
+2015-06-02T20:04:12.103+0100 [initandlisten] connection accepted from 127.0.0.1:64447 #1094 (3 connections now open)
+2015-06-02T20:04:12.103+0100 [initandlisten] connection accepted from 127.0.0.1:64448 #1095 (4 connections now open)
+2015-06-02T20:04:12.104+0100 [initandlisten] connection accepted from 127.0.0.1:64449 #1096 (5 connections now open)
+2015-06-02T20:04:27.923+0100 [conn1094] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ $query: { tags: { $in: "" } }, orderby: { created: -1 } }
+2015-06-02T20:04:27.958+0100 [conn1096] end connection 127.0.0.1:64449 (4 connections now open)
+2015-06-02T20:04:27.962+0100 [conn1095] end connection 127.0.0.1:64448 (3 connections now open)
+2015-06-02T20:04:27.963+0100 [conn1094] end connection 127.0.0.1:64447 (2 connections now open)
+2015-06-02T20:04:27.964+0100 [conn1093] end connection 127.0.0.1:64446 (1 connection now open)
+2015-06-02T20:04:27.964+0100 [conn1092] end connection 127.0.0.1:64445 (0 connections now open)
+2015-06-02T20:04:41.258+0100 [clientcursormon] mem (MB) res:3 virt:2800
+2015-06-02T20:04:41.258+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:04:41.258+0100 [clientcursormon]  connections:0
+2015-06-02T20:05:37.631+0100 [initandlisten] connection accepted from 127.0.0.1:64514 #1097 (1 connection now open)
+2015-06-02T20:05:37.781+0100 [initandlisten] connection accepted from 127.0.0.1:64515 #1098 (2 connections now open)
+2015-06-02T20:05:37.781+0100 [initandlisten] connection accepted from 127.0.0.1:64516 #1099 (3 connections now open)
+2015-06-02T20:05:37.782+0100 [initandlisten] connection accepted from 127.0.0.1:64517 #1100 (4 connections now open)
+2015-06-02T20:05:37.782+0100 [initandlisten] connection accepted from 127.0.0.1:64518 #1101 (5 connections now open)
+2015-06-02T20:05:39.810+0100 [conn1099] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ $query: { tags: { $in: "" } }, orderby: { created: -1 } }
+2015-06-02T20:05:39.816+0100 [conn1098] end connection 127.0.0.1:64515 (4 connections now open)
+2015-06-02T20:05:39.816+0100 [conn1101] end connection 127.0.0.1:64518 (4 connections now open)
+2015-06-02T20:05:39.817+0100 [conn1100] end connection 127.0.0.1:64517 (3 connections now open)
+2015-06-02T20:05:39.817+0100 [conn1099] end connection 127.0.0.1:64516 (3 connections now open)
+2015-06-02T20:05:39.817+0100 [conn1097] end connection 127.0.0.1:64514 (3 connections now open)
+2015-06-02T20:09:21.293+0100 [initandlisten] connection accepted from 127.0.0.1:64553 #1102 (1 connection now open)
+2015-06-02T20:09:21.310+0100 [initandlisten] connection accepted from 127.0.0.1:64554 #1103 (2 connections now open)
+2015-06-02T20:09:21.310+0100 [initandlisten] connection accepted from 127.0.0.1:64555 #1104 (3 connections now open)
+2015-06-02T20:09:21.310+0100 [initandlisten] connection accepted from 127.0.0.1:64556 #1105 (4 connections now open)
+2015-06-02T20:09:21.311+0100 [initandlisten] connection accepted from 127.0.0.1:64557 #1106 (5 connections now open)
+2015-06-02T20:09:27.770+0100 [conn1106] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN ntoreturn:50 ntoskip:0 nscanned:78 nscannedObjects:78 keyUpdates:0 numYields:0 locks(micros) r:206696 nreturned:39 reslen:10658 206ms
+2015-06-02T20:09:41.963+0100 [clientcursormon] mem (MB) res:4 virt:2803
+2015-06-02T20:09:41.964+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:09:41.964+0100 [clientcursormon]  connections:5
+2015-06-02T20:13:28.270+0100 [conn1104] end connection 127.0.0.1:64555 (4 connections now open)
+2015-06-02T20:13:28.270+0100 [conn1103] end connection 127.0.0.1:64554 (4 connections now open)
+2015-06-02T20:13:28.270+0100 [conn1106] end connection 127.0.0.1:64557 (4 connections now open)
+2015-06-02T20:13:28.270+0100 [conn1102] end connection 127.0.0.1:64553 (4 connections now open)
+2015-06-02T20:13:28.270+0100 [conn1105] end connection 127.0.0.1:64556 (4 connections now open)
+2015-06-02T20:14:19.528+0100 [initandlisten] connection accepted from 127.0.0.1:64600 #1107 (1 connection now open)
+2015-06-02T20:14:19.784+0100 [initandlisten] connection accepted from 127.0.0.1:64601 #1108 (2 connections now open)
+2015-06-02T20:14:19.784+0100 [initandlisten] connection accepted from 127.0.0.1:64602 #1109 (3 connections now open)
+2015-06-02T20:14:19.785+0100 [initandlisten] connection accepted from 127.0.0.1:64603 #1110 (4 connections now open)
+2015-06-02T20:14:19.786+0100 [initandlisten] connection accepted from 127.0.0.1:64604 #1111 (5 connections now open)
+2015-06-02T20:14:40.220+0100 [conn1110] query songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } planSummary: COLLSCAN ntoskip:0 nscanned:1 nscannedObjects:1 keyUpdates:0 numYields:0 locks(micros) r:252893 nreturned:1 reslen:271 252ms
+2015-06-02T20:14:41.391+0100 [conn1111] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN ntoreturn:50 ntoskip:0 nscanned:78 nscannedObjects:78 keyUpdates:0 numYields:1 locks(micros) r:1156014 nreturned:39 reslen:10658 694ms
+2015-06-02T20:14:42.169+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T20:14:44.810+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:14:44.811+0100 [clientcursormon]  connections:5
+2015-06-02T20:14:45.706+0100 [conn1108] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433272484923) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:343049 779ms
+2015-06-02T20:14:46.725+0100 [conn1108] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433272484923) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 1799ms
+2015-06-02T20:15:31.197+0100 [conn1109] query songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } planSummary: COLLSCAN ntoskip:0 nscanned:1 nscannedObjects:1 keyUpdates:0 numYields:0 locks(micros) r:112215 nreturned:1 reslen:271 112ms
+2015-06-02T20:15:32.042+0100 [conn1110] query songsphere.posts query: { $query: { author: "Elliot Hogg" }, orderby: { created: -1 } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:39 nscannedObjects:39 scanAndOrder:1 keyUpdates:0 numYields:0 locks(micros) r:179353 nreturned:2 reslen:2252 179ms
+2015-06-02T20:15:32.043+0100 [conn1111] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN ntoreturn:50 ntoskip:0 nscanned:78 nscannedObjects:78 keyUpdates:0 numYields:0 locks(micros) r:180036 nreturned:39 reslen:10658 180ms
+2015-06-02T20:15:43.264+0100 [conn1110] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN ntoreturn:50 ntoskip:0 nscanned:78 nscannedObjects:78 keyUpdates:0 numYields:0 locks(micros) r:189025 nreturned:39 reslen:10658 189ms
+2015-06-02T20:15:55.231+0100 [conn1109] query songsphere.posts query: { _id: ObjectId('5568c2478f9efdfd4f303eb7') } planSummary: IDHACK ntoskip:0 nscanned:1 nscannedObjects:1 idhack:1 keyUpdates:0 numYields:0 locks(micros) r:442664 nreturned:1 reslen:2385 442ms
+2015-06-02T20:15:56.236+0100 [conn1110] query songsphere.posts query: { $query: { author: "SD", _id: { $ne: ObjectId('5568c2478f9efdfd4f303eb7') } }, orderby: { created: -1 } } planSummary: IXSCAN { _id: 1 }, IXSCAN { _id: 1 } ntoreturn:3 ntoskip:0 nscanned:78 nscannedObjects:76 keyUpdates:0 numYields:0 locks(micros) r:764732 nreturned:0 reslen:20 764ms
+2015-06-02T20:16:34.869+0100 [conn1111] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433272593987) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:190 880ms
+2015-06-02T20:16:35.217+0100 [conn1108] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ $query: { tags: { $in: "Editions Mego" } }, orderby: { created: -1 } }
+2015-06-02T20:16:35.362+0100 [conn1111] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433272593987) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 1374ms
+2015-06-02T20:16:35.454+0100 [conn1108] query songsphere.posts query: { $query: { tags: { $in: "Editions Mego" } }, orderby: { created: -1 } } ntoreturn:0 keyUpdates:0 exception: Can't canonicalize query: BadValue $in needs an array code:17287 numYields:0 locks(micros) r:1066495 reslen:99 1651ms
+2015-06-02T20:16:35.873+0100 [conn1111] end connection 127.0.0.1:64604 (4 connections now open)
+2015-06-02T20:16:35.873+0100 [conn1110] end connection 127.0.0.1:64603 (4 connections now open)
+2015-06-02T20:16:35.873+0100 [conn1109] end connection 127.0.0.1:64602 (4 connections now open)
+2015-06-02T20:16:35.873+0100 [conn1108] end connection 127.0.0.1:64601 (4 connections now open)
+2015-06-02T20:16:35.874+0100 [conn1107] end connection 127.0.0.1:64600 (4 connections now open)
+2015-06-02T20:16:41.352+0100 [TTLMonitor] query songsphere.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:4 nscannedObjects:4 keyUpdates:0 numYields:0 locks(micros) r:145925 nreturned:1 reslen:150 145ms
+2015-06-02T20:19:19.382+0100 [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 40ms
+2015-06-02T20:19:45.087+0100 [clientcursormon] mem (MB) res:1 virt:2800
+2015-06-02T20:19:45.941+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:19:45.942+0100 [clientcursormon]  connections:0
+2015-06-02T20:19:46.454+0100 [TTLMonitor] query admin.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: EOF ntoreturn:0 ntoskip:0 nscanned:0 nscannedObjects:0 keyUpdates:0 numYields:0 locks(micros) r:3297598 nreturned:0 reslen:20 2996ms
+2015-06-02T20:19:48.916+0100 [TTLMonitor] query local.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:1 nscannedObjects:1 keyUpdates:0 numYields:1 locks(micros) r:2528999 nreturned:0 reslen:20 1266ms
+2015-06-02T20:20:46.364+0100 [clientcursormon] mem (MB) res:2 virt:2800
+2015-06-02T20:20:46.506+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:20:46.506+0100 [clientcursormon]  connections:0
+2015-06-02T20:25:46.745+0100 [clientcursormon] mem (MB) res:2 virt:2800
+2015-06-02T20:25:46.896+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:25:46.897+0100 [clientcursormon]  connections:0
+2015-06-02T20:30:13.347+0100 [initandlisten] connection accepted from 127.0.0.1:64799 #1112 (1 connection now open)
+2015-06-02T20:30:13.403+0100 [initandlisten] connection accepted from 127.0.0.1:64800 #1113 (2 connections now open)
+2015-06-02T20:30:13.409+0100 [initandlisten] connection accepted from 127.0.0.1:64801 #1114 (3 connections now open)
+2015-06-02T20:30:13.409+0100 [initandlisten] connection accepted from 127.0.0.1:64802 #1115 (4 connections now open)
+2015-06-02T20:30:13.410+0100 [initandlisten] connection accepted from 127.0.0.1:64803 #1116 (5 connections now open)
+2015-06-02T20:30:19.324+0100 [conn1116] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN ntoreturn:50 ntoskip:0 nscanned:78 nscannedObjects:78 keyUpdates:0 numYields:0 locks(micros) r:160427 nreturned:39 reslen:10658 160ms
+2015-06-02T20:30:20.920+0100 [conn1113] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433273419785) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:570345 575ms
+2015-06-02T20:30:21.055+0100 [conn1113] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433273419785) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 999ms
+2015-06-02T20:30:47.108+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T20:30:47.178+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:30:47.178+0100 [clientcursormon]  connections:5
+2015-06-02T20:35:47.395+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T20:35:47.409+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:35:47.409+0100 [clientcursormon]  connections:5
+2015-06-02T20:40:47.631+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T20:40:47.718+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:40:47.719+0100 [clientcursormon]  connections:5
+2015-06-02T20:44:33.149+0100 [conn1113] end connection 127.0.0.1:64800 (4 connections now open)
+2015-06-02T20:44:33.149+0100 [conn1116] end connection 127.0.0.1:64803 (4 connections now open)
+2015-06-02T20:44:33.149+0100 [conn1114] end connection 127.0.0.1:64801 (4 connections now open)
+2015-06-02T20:44:33.149+0100 [conn1115] end connection 127.0.0.1:64802 (4 connections now open)
+2015-06-02T20:44:33.149+0100 [conn1112] end connection 127.0.0.1:64799 (4 connections now open)
+2015-06-02T20:44:41.653+0100 [initandlisten] connection accepted from 127.0.0.1:65024 #1117 (1 connection now open)
+2015-06-02T20:44:41.699+0100 [initandlisten] connection accepted from 127.0.0.1:65025 #1118 (2 connections now open)
+2015-06-02T20:44:41.699+0100 [initandlisten] connection accepted from 127.0.0.1:65026 #1119 (3 connections now open)
+2015-06-02T20:44:41.700+0100 [initandlisten] connection accepted from 127.0.0.1:65027 #1120 (4 connections now open)
+2015-06-02T20:44:41.701+0100 [initandlisten] connection accepted from 127.0.0.1:65028 #1121 (5 connections now open)
+2015-06-02T20:44:49.426+0100 [conn1121] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN ntoreturn:50 ntoskip:0 nscanned:78 nscannedObjects:78 keyUpdates:0 numYields:1 locks(micros) r:394998 nreturned:39 reslen:10658 226ms
+2015-06-02T20:44:51.087+0100 [conn1118] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433274289636) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:1264711 1301ms
+2015-06-02T20:44:51.369+0100 [conn1118] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433274289636) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 1688ms
+2015-06-02T20:44:55.512+0100 [conn1118] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433274295335) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:305 175ms
+2015-06-02T20:44:55.553+0100 [conn1118] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433274295335) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 217ms
+2015-06-02T20:44:55.595+0100 [conn1120] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ $query: { tags: { $elemMatch: { $in: "Electronic" } } }, orderby: { created: -1 } }
+2015-06-02T20:44:55.595+0100 [conn1120] query songsphere.posts query: { $query: { tags: { $elemMatch: { $in: "Electronic" } } }, orderby: { created: -1 } } ntoreturn:0 keyUpdates:0 exception: Can't canonicalize query: BadValue $in needs an array code:17287 numYields:0 locks(micros) r:195576 reslen:99 279ms
+2015-06-02T20:44:55.694+0100 [conn1120] end connection 127.0.0.1:65027 (4 connections now open)
+2015-06-02T20:44:55.694+0100 [conn1121] end connection 127.0.0.1:65028 (4 connections now open)
+2015-06-02T20:44:55.694+0100 [conn1119] end connection 127.0.0.1:65026 (4 connections now open)
+2015-06-02T20:44:55.694+0100 [conn1118] end connection 127.0.0.1:65025 (4 connections now open)
+2015-06-02T20:44:55.694+0100 [conn1117] end connection 127.0.0.1:65024 (4 connections now open)
+2015-06-02T20:45:30.747+0100 [initandlisten] connection accepted from 127.0.0.1:65066 #1122 (1 connection now open)
+2015-06-02T20:45:30.766+0100 [initandlisten] connection accepted from 127.0.0.1:65067 #1123 (2 connections now open)
+2015-06-02T20:45:30.767+0100 [initandlisten] connection accepted from 127.0.0.1:65068 #1124 (3 connections now open)
+2015-06-02T20:45:30.767+0100 [initandlisten] connection accepted from 127.0.0.1:65069 #1125 (4 connections now open)
+2015-06-02T20:45:30.767+0100 [initandlisten] connection accepted from 127.0.0.1:65070 #1126 (5 connections now open)
+2015-06-02T20:45:35.149+0100 [conn1126] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ $query: { tags: { $elemMatch: { $in: "Electronic" } } }, orderby: { created: -1 } }
+2015-06-02T20:45:47.926+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T20:45:47.948+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:45:47.949+0100 [clientcursormon]  connections:5
+2015-06-02T20:46:05.146+0100 [conn1126] end connection 127.0.0.1:65070 (4 connections now open)
+2015-06-02T20:46:05.146+0100 [conn1125] end connection 127.0.0.1:65069 (4 connections now open)
+2015-06-02T20:46:05.146+0100 [conn1124] end connection 127.0.0.1:65068 (4 connections now open)
+2015-06-02T20:46:05.146+0100 [conn1123] end connection 127.0.0.1:65067 (4 connections now open)
+2015-06-02T20:46:05.146+0100 [conn1122] end connection 127.0.0.1:65066 (4 connections now open)
+2015-06-02T20:46:09.846+0100 [initandlisten] connection accepted from 127.0.0.1:65090 #1127 (1 connection now open)
+2015-06-02T20:46:09.848+0100 [initandlisten] connection accepted from 127.0.0.1:65091 #1128 (2 connections now open)
+2015-06-02T20:46:09.849+0100 [initandlisten] connection accepted from 127.0.0.1:65092 #1129 (3 connections now open)
+2015-06-02T20:46:09.850+0100 [initandlisten] connection accepted from 127.0.0.1:65093 #1130 (4 connections now open)
+2015-06-02T20:46:09.851+0100 [initandlisten] connection accepted from 127.0.0.1:65094 #1131 (5 connections now open)
+2015-06-02T20:46:13.434+0100 [conn1131] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ tags: { $elemMatch: { $in: "Electronic" } } }
+2015-06-02T20:50:48.174+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T20:50:48.281+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:50:48.281+0100 [clientcursormon]  connections:5
+2015-06-02T20:55:48.647+0100 [clientcursormon] mem (MB) res:2 virt:2803
+2015-06-02T20:55:48.765+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:55:48.765+0100 [clientcursormon]  connections:5
+2015-06-02T20:59:38.700+0100 [conn1127] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN ntoreturn:50 ntoskip:0 nscanned:78 nscannedObjects:78 keyUpdates:0 numYields:0 locks(micros) r:397775 nreturned:39 reslen:10658 397ms
+2015-06-02T20:59:38.734+0100 [conn1131] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ tags: { $elemMatch: { $in: "Electronic" } } }
+2015-06-02T20:59:38.754+0100 [conn1131] query songsphere.posts query: { tags: { $elemMatch: { $in: "Electronic" } } } ntoreturn:0 keyUpdates:0 exception: Can't canonicalize query: BadValue $in needs an array code:17287 numYields:0 locks(micros) r:425024 reslen:99 493ms
+2015-06-02T20:59:39.699+0100 [conn1131] end connection 127.0.0.1:65094 (4 connections now open)
+2015-06-02T20:59:39.699+0100 [conn1130] end connection 127.0.0.1:65093 (4 connections now open)
+2015-06-02T20:59:39.699+0100 [conn1128] end connection 127.0.0.1:65091 (4 connections now open)
+2015-06-02T20:59:39.699+0100 [conn1127] end connection 127.0.0.1:65090 (4 connections now open)
+2015-06-02T20:59:40.807+0100 [conn1129] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433275178876) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:897203 1141ms
+2015-06-02T20:59:40.808+0100 [conn1129] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433275178876) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 1656ms
+2015-06-02T20:59:40.808+0100 [conn1129] end connection 127.0.0.1:65092 (0 connections now open)
+2015-06-02T20:59:48.954+0100 [clientcursormon] mem (MB) res:3 virt:2800
+2015-06-02T20:59:49.095+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T20:59:49.096+0100 [clientcursormon]  connections:0
+2015-06-02T21:00:10.608+0100 [initandlisten] connection accepted from 127.0.0.1:65244 #1132 (1 connection now open)
+2015-06-02T21:00:10.656+0100 [initandlisten] connection accepted from 127.0.0.1:65245 #1133 (2 connections now open)
+2015-06-02T21:00:10.656+0100 [initandlisten] connection accepted from 127.0.0.1:65246 #1134 (3 connections now open)
+2015-06-02T21:00:10.656+0100 [initandlisten] connection accepted from 127.0.0.1:65247 #1135 (4 connections now open)
+2015-06-02T21:00:10.657+0100 [initandlisten] connection accepted from 127.0.0.1:65248 #1136 (5 connections now open)
+2015-06-02T21:00:41.338+0100 [conn1132] query songsphere.posts query: { tags: { $elemMatch: { $in: [ "tag1", "tag2", "tag3", "tag4", "tag5", "tag6", "tag7" ] } } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:39 nscannedObjects:39 keyUpdates:0 numYields:0 locks(micros) r:123868 nreturned:0 reslen:20 123ms
+2015-06-02T21:00:41.339+0100 [conn1133] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN ntoreturn:50 ntoskip:0 nscanned:78 nscannedObjects:78 keyUpdates:0 numYields:0 locks(micros) r:124522 nreturned:39 reslen:10658 124ms
+2015-06-02T21:04:03.617+0100 [conn1132] end connection 127.0.0.1:65244 (4 connections now open)
+2015-06-02T21:04:03.617+0100 [conn1135] end connection 127.0.0.1:65247 (4 connections now open)
+2015-06-02T21:04:03.617+0100 [conn1136] end connection 127.0.0.1:65248 (4 connections now open)
+2015-06-02T21:04:03.617+0100 [conn1134] end connection 127.0.0.1:65246 (4 connections now open)
+2015-06-02T21:04:03.617+0100 [conn1133] end connection 127.0.0.1:65245 (4 connections now open)
+2015-06-02T21:04:17.181+0100 [initandlisten] connection accepted from 127.0.0.1:65286 #1137 (1 connection now open)
+2015-06-02T21:04:17.238+0100 [initandlisten] connection accepted from 127.0.0.1:65287 #1138 (2 connections now open)
+2015-06-02T21:04:17.238+0100 [initandlisten] connection accepted from 127.0.0.1:65288 #1139 (3 connections now open)
+2015-06-02T21:04:17.239+0100 [initandlisten] connection accepted from 127.0.0.1:65289 #1140 (4 connections now open)
+2015-06-02T21:04:17.239+0100 [initandlisten] connection accepted from 127.0.0.1:65290 #1141 (5 connections now open)
+2015-06-02T21:04:21.685+0100 [PeriodicTaskRunner] task: WriteBackManager::cleaner took: 350ms
+2015-06-02T21:04:49.382+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T21:04:49.410+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T21:04:49.410+0100 [clientcursormon]  connections:5
+2015-06-02T21:06:47.256+0100 [conn1137] assertion 17287 Can't canonicalize query: BadValue $in needs an array ns:songsphere.posts query:{ tags: { $elemMatch: { $in: "Electronic" } } }
+2015-06-02T21:06:47.246+0100 [conn1140] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433275607051) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:183 186ms
+2015-06-02T21:06:47.391+0100 [conn1137] query songsphere.posts query: { tags: { $elemMatch: { $in: "Electronic" } } } ntoreturn:0 keyUpdates:0 exception: Can't canonicalize query: BadValue $in needs an array code:17287 numYields:0 locks(micros) r:206262 reslen:99 358ms
+2015-06-02T21:06:47.391+0100 [conn1140] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433275607051) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 339ms
+2015-06-02T21:06:47.435+0100 [conn1141] end connection 127.0.0.1:65290 (4 connections now open)
+2015-06-02T21:06:47.435+0100 [conn1140] end connection 127.0.0.1:65289 (4 connections now open)
+2015-06-02T21:06:47.436+0100 [conn1139] end connection 127.0.0.1:65288 (4 connections now open)
+2015-06-02T21:06:47.436+0100 [conn1138] end connection 127.0.0.1:65287 (4 connections now open)
+2015-06-02T21:06:47.436+0100 [conn1137] end connection 127.0.0.1:65286 (3 connections now open)
+2015-06-02T21:09:49.637+0100 [clientcursormon] mem (MB) res:3 virt:2800
+2015-06-02T21:09:50.800+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T21:09:50.801+0100 [clientcursormon]  connections:0
+2015-06-02T21:10:58.512+0100 [initandlisten] connection accepted from 127.0.0.1:65377 #1142 (1 connection now open)
+2015-06-02T21:10:58.581+0100 [initandlisten] connection accepted from 127.0.0.1:65378 #1143 (2 connections now open)
+2015-06-02T21:10:58.582+0100 [initandlisten] connection accepted from 127.0.0.1:65379 #1144 (3 connections now open)
+2015-06-02T21:10:58.582+0100 [initandlisten] connection accepted from 127.0.0.1:65380 #1145 (4 connections now open)
+2015-06-02T21:10:58.583+0100 [initandlisten] connection accepted from 127.0.0.1:65381 #1146 (5 connections now open)
+2015-06-02T21:11:34.138+0100 [conn1145] query songsphere.posts query: { tags: { $elemMatch: { $in: [ "Bauteile" ] } } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:39 nscannedObjects:39 keyUpdates:0 numYields:0 locks(micros) r:110775 nreturned:1 reslen:1024 110ms
+2015-06-02T21:14:51.020+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T21:14:51.252+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T21:14:51.252+0100 [clientcursormon]  connections:5
+2015-06-02T21:15:29.933+0100 [conn1144] query songsphere.users query: { username: "crabbe" } planSummary: COLLSCAN ntoskip:0 nscanned:3 nscannedObjects:3 keyUpdates:0 numYields:0 locks(micros) r:220280 nreturned:1 reslen:311 220ms
+2015-06-02T21:15:38.924+0100 [conn1142] command songsphere.$cmd command: findAndModify { findandmodify: "posts", query: { _id: ObjectId('5568c2478f9efdfd4f303eb5') }, new: 1, remove: 0, upsert: 1, update: { $push: { comments: { author: "crabbe", body: "yo ", _id: ObjectId('556e0eea6e276971da29ab0a'), date: new Date(1433276138352) } }, $setOnInsert: { __v: 0 } }, writeConcern: { w: 1 } } update: { $push: { comments: { author: "crabbe", body: "yo ", _id: ObjectId('556e0eea6e276971da29ab0a'), date: new Date(1433276138352) } }, $setOnInsert: { __v: 0 } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:0 numYields:0 locks(micros) w:526154 reslen:1406 526ms
+2015-06-02T21:15:39.126+0100 [conn1144] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433276138953) } } nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:153 172ms
+2015-06-02T21:15:39.336+0100 [conn1144] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433276138953) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 172ms
+2015-06-02T21:15:39.621+0100 [conn1144] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433276139068) } } nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:224 284ms
+2015-06-02T21:15:39.621+0100 [conn1144] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433276139068) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 284ms
+2015-06-02T21:15:51.297+0100 [clientcursormon] mem (MB) res:4 virt:2803
+2015-06-02T21:15:53.088+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T21:15:53.088+0100 [clientcursormon]  connections:5
+2015-06-02T21:16:50.048+0100 [TTLMonitor] query songsphere.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:4 nscannedObjects:4 keyUpdates:0 numYields:0 locks(micros) r:143448 nreturned:1 reslen:150 143ms
+2015-06-02T21:20:53.706+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T21:20:53.858+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T21:20:53.858+0100 [clientcursormon]  connections:5
+2015-06-02T21:24:06.905+0100 [conn1144] query songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } planSummary: COLLSCAN ntoskip:0 nscanned:1 nscannedObjects:1 keyUpdates:0 numYields:0 locks(micros) r:120202 nreturned:1 reslen:352 120ms
+2015-06-02T21:24:07.434+0100 [conn1145] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN ntoreturn:50 ntoskip:0 nscanned:78 nscannedObjects:78 keyUpdates:0 numYields:0 locks(micros) r:123853 nreturned:39 reslen:10745 123ms
+2015-06-02T21:25:10.629+0100 [conn1146] end connection 127.0.0.1:65381 (4 connections now open)
+2015-06-02T21:25:10.629+0100 [conn1145] end connection 127.0.0.1:65380 (4 connections now open)
+2015-06-02T21:25:10.629+0100 [conn1144] end connection 127.0.0.1:65379 (4 connections now open)
+2015-06-02T21:25:10.629+0100 [conn1142] end connection 127.0.0.1:65377 (4 connections now open)
+2015-06-02T21:25:10.629+0100 [conn1143] end connection 127.0.0.1:65378 (4 connections now open)
+2015-06-02T21:25:46.163+0100 [initandlisten] connection accepted from 127.0.0.1:49294 #1147 (1 connection now open)
+2015-06-02T21:25:46.183+0100 [initandlisten] connection accepted from 127.0.0.1:49295 #1148 (2 connections now open)
+2015-06-02T21:25:46.183+0100 [initandlisten] connection accepted from 127.0.0.1:49296 #1149 (3 connections now open)
+2015-06-02T21:25:46.183+0100 [initandlisten] connection accepted from 127.0.0.1:49297 #1150 (4 connections now open)
+2015-06-02T21:25:46.184+0100 [initandlisten] connection accepted from 127.0.0.1:49298 #1151 (5 connections now open)
+2015-06-02T21:25:54.077+0100 [clientcursormon] mem (MB) res:4 virt:2803
+2015-06-02T21:25:54.084+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T21:25:54.084+0100 [clientcursormon]  connections:5
+2015-06-02T21:30:54.301+0100 [clientcursormon] mem (MB) res:4 virt:2803
+2015-06-02T21:30:54.431+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T21:30:54.431+0100 [clientcursormon]  connections:5
+2015-06-02T21:35:54.670+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T21:35:54.808+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T21:35:54.809+0100 [clientcursormon]  connections:5
+2015-06-02T21:35:55.531+0100 [conn1151] end connection 127.0.0.1:49298 (4 connections now open)
+2015-06-02T21:35:55.531+0100 [conn1150] end connection 127.0.0.1:49297 (3 connections now open)
+2015-06-02T21:35:55.532+0100 [conn1149] end connection 127.0.0.1:49296 (2 connections now open)
+2015-06-02T21:35:55.532+0100 [conn1148] end connection 127.0.0.1:49295 (2 connections now open)
+2015-06-02T21:35:55.532+0100 [conn1147] end connection 127.0.0.1:49294 (2 connections now open)
+2015-06-02T21:36:02.913+0100 [initandlisten] connection accepted from 127.0.0.1:49444 #1152 (1 connection now open)
+2015-06-02T21:36:02.916+0100 [initandlisten] connection accepted from 127.0.0.1:49445 #1153 (2 connections now open)
+2015-06-02T21:36:02.917+0100 [initandlisten] connection accepted from 127.0.0.1:49446 #1154 (3 connections now open)
+2015-06-02T21:36:02.918+0100 [initandlisten] connection accepted from 127.0.0.1:49447 #1155 (4 connections now open)
+2015-06-02T21:36:02.918+0100 [initandlisten] connection accepted from 127.0.0.1:49448 #1156 (5 connections now open)
+2015-06-02T21:36:19.228+0100 [conn1156] end connection 127.0.0.1:49448 (4 connections now open)
+2015-06-02T21:36:19.228+0100 [conn1155] end connection 127.0.0.1:49447 (4 connections now open)
+2015-06-02T21:36:19.228+0100 [conn1154] end connection 127.0.0.1:49446 (4 connections now open)
+2015-06-02T21:36:19.228+0100 [conn1153] end connection 127.0.0.1:49445 (4 connections now open)
+2015-06-02T21:36:19.228+0100 [conn1152] end connection 127.0.0.1:49444 (4 connections now open)
+2015-06-02T21:40:00.874+0100 [initandlisten] connection accepted from 127.0.0.1:49585 #1157 (1 connection now open)
+2015-06-02T21:40:00.957+0100 [initandlisten] connection accepted from 127.0.0.1:49586 #1158 (2 connections now open)
+2015-06-02T21:40:00.958+0100 [initandlisten] connection accepted from 127.0.0.1:49587 #1159 (3 connections now open)
+2015-06-02T21:40:00.959+0100 [initandlisten] connection accepted from 127.0.0.1:49588 #1160 (4 connections now open)
+2015-06-02T21:40:00.959+0100 [initandlisten] connection accepted from 127.0.0.1:49589 #1161 (5 connections now open)
+2015-06-02T21:40:55.025+0100 [clientcursormon] mem (MB) res:3 virt:2803
+2015-06-02T21:40:55.248+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T21:40:55.248+0100 [clientcursormon]  connections:5
+2015-06-02T21:41:03.306+0100 [conn1161] end connection 127.0.0.1:49589 (4 connections now open)
+2015-06-02T21:41:03.307+0100 [conn1160] end connection 127.0.0.1:49588 (4 connections now open)
+2015-06-02T21:41:03.307+0100 [conn1158] end connection 127.0.0.1:49586 (4 connections now open)
+2015-06-02T21:41:03.307+0100 [conn1159] end connection 127.0.0.1:49587 (4 connections now open)
+2015-06-02T21:41:03.307+0100 [conn1157] end connection 127.0.0.1:49585 (4 connections now open)
+2015-06-02T21:41:10.966+0100 [initandlisten] connection accepted from 127.0.0.1:49615 #1162 (1 connection now open)
+2015-06-02T21:41:10.968+0100 [initandlisten] connection accepted from 127.0.0.1:49616 #1163 (2 connections now open)
+2015-06-02T21:41:10.969+0100 [initandlisten] connection accepted from 127.0.0.1:49617 #1164 (3 connections now open)
+2015-06-02T21:41:10.969+0100 [initandlisten] connection accepted from 127.0.0.1:49618 #1165 (4 connections now open)
+2015-06-02T21:41:10.970+0100 [initandlisten] connection accepted from 127.0.0.1:49619 #1166 (5 connections now open)
+2015-06-02T21:41:20.605+0100 [conn1165] query songsphere.posts query: { tags: { $elemMatch: { $in: [ "The Humble Bee" ] } } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:39 nscannedObjects:39 keyUpdates:0 numYields:0 locks(micros) r:287608 nreturned:1 reslen:1335 287ms
+2015-06-02T21:41:20.605+0100 [conn1163] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433277680240) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:179 166ms
+2015-06-02T21:41:20.863+0100 [conn1163] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } }, userProfileModel: { email: "stilled_flyer@hotmail.com", username: "crabbe" } }, createdAt: new Date(1433277680240) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 622ms
+2015-06-02T21:42:55.343+0100 [clientcursormon] mem (MB) res:4 virt:2803
+2015-06-02T21:42:55.414+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-02T21:42:55.414+0100 [clientcursormon]  connections:5
+2015-06-02T21:43:28.568+0100 [conn1166] update songsphere.sessions query: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" } update: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433277808458) } } nscanned:1 nscannedObjects:1 nMatched:1 nModified:1 keyUpdates:1 numYields:0 locks(micros) w:206 108ms
+2015-06-02T21:43:28.647+0100 [conn1164] query songsphere.posts query: { $query: {}, orderby: { created: 1 } } planSummary: COLLSCAN, COLLSCAN ntoreturn:50 ntoskip:0 nscanned:78 nscannedObjects:78 keyUpdates:0 numYields:1 locks(micros) r:310339 nreturned:39 reslen:10745 194ms
+2015-06-02T21:43:28.727+0100 [conn1166] command songsphere.$cmd command: update { update: "sessions", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx" }, u: { $set: { sid: "4U5Rn3HixChUViiPjZ5igmrs6yEfqCTx", session: { cookie: { path: "/", _expires: null, originalMaxAge: null, httpOnly: true, expires: null, maxAge: null, data: { originalMaxAge: null, expires: null, secure: null, httpOnly: true, domain: null, path: "/" } } }, createdAt: new Date(1433277808458) } }, multi: false, upsert: true } ] } keyUpdates:0 numYields:0  reslen:55 267ms
+2015-06-02T21:43:40.399+0100 [conn1166] end connection 127.0.0.1:49619 (4 connections now open)
+2015-06-02T21:43:40.399+0100 [conn1165] end connection 127.0.0.1:49618 (4 connections now open)
+2015-06-02T21:43:40.399+0100 [conn1164] end connection 127.0.0.1:49617 (4 connections now open)
+2015-06-02T21:43:40.399+0100 [conn1163] end connection 127.0.0.1:49616 (4 connections now open)
+2015-06-02T21:43:40.399+0100 [conn1162] end connection 127.0.0.1:49615 (4 connections now open)

@@ -1,5 +1,6 @@
 var express = require('express'),
     mongoose = require('mongoose'),
+    qs = require('querystring'),
     router = express.Router(),
     AccountController = require('../controllers/account.js'),
     UserController = require('../controllers/user.js'),
@@ -14,22 +15,101 @@ var express = require('express'),
     UserPasswordResetFinal = require('../models/user-pwd-reset-final.js'),
     session = [],
     viewDataSignedIn = [{signInOrOut: "sign in", signRoute: "./sign-in"},
-                          {signInOrOut: "sign out", signRoute: "./sign-out"}],
+                        {signInOrOut: "sign out", signRoute: "./sign-out"}],
     errorMessages = ["username not found", "invalid password","database error",
                      "not found", "username already exists", "could not create user",
                      "passwords do not match", "could not create post"];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+    console.log("router.get('/'");
+    console.log("req.query: " + req.query);
     var accountController = new AccountController(User, req.session);
-    Post.find().sort({ created: -1 }).limit(30).exec(function(err, latestPosts) {
+    var signedIn = accountController.session.userProfileModel !== undefined ? 1 : 0;
+    if(req.query.author !== undefined) {
+        var author = req.query.author;
+        Post.find().where('author').equals(author).sort({ created: -1 }).exec(function(err, authorsPosts) {
+            if (err) return res.send(err);
+            res.render('pages/index', {
+                viewDataSignStatus: viewDataSignedIn[signedIn],
+                previews: authorsPosts
+            });
+        });
+    }
+    
+    if(req.query.filter !== undefined && req.query.filter.constructor === Array) {
+        console.log("here3");
+        var tagList = req.query.filter
+        console.log("tagList = " + tagList);
+        console.log("tagList[0] = " + tagList[0]);
+        //Post.find().where('tags').in(tagList).sort({ created: -1 }).exec(function(err, taggedPosts) {
+        Post.find( { tags : { $elemMatch: { $in : tagList } } } ).exec(function(err, taggedPosts) {
+            console.log("taggedPosts.length = " + taggedPosts.length);
+            console.log("taggedPosts = " + taggedPosts);
+            if (err) return res.send(err);
+            if(taggedPosts.length==0) {
+                res.render('pages/index', {
+                viewDataSignStatus: viewDataSignedIn[signedIn],
+                previews: taggedPosts,
+                error: "Sorry there are no posts with that tag."
+            });
+            } else {
+                res.render('pages/index', {
+                    viewDataSignStatus: viewDataSignedIn[signedIn],
+                    previews: taggedPosts
+                });
+            }
+        });
+    }
+    
+    if(req.query.filter !== undefined && req.query.filter.constructor !== Array) {
+    console.log("here5");
+    var tagList = req.query.filter.split(",");
+    console.log("tagList = " + tagList);
+    console.log("tagList[0] = " + tagList[0]);
+    //Post.find().where('tags').in(tagList).sort({ created: -1 }).exec(function(err, taggedPosts) {
+    Post.find( { tags : { $elemMatch: { $in : tagList } } } ).exec(function(err, taggedPosts) {
+        console.log("taggedPosts.length = " + taggedPosts.length);
+        console.log("taggedPosts = " + taggedPosts);
         if (err) return res.send(err);
-        var signedIn = accountController.session.userProfileModel !== undefined ? 1 : 0;
+        if(taggedPosts.length==0) {
+            res.render('pages/index', {
+            viewDataSignStatus: viewDataSignedIn[signedIn],
+            previews: taggedPosts,
+            error: "Sorry there are no posts with that tag."
+        });
+        } else {
+            res.render('pages/index', {
+                viewDataSignStatus: viewDataSignedIn[signedIn],
+                previews: taggedPosts
+            });
+        }
+    });
+}
+
+    Post.find().sort({ created: 1 }).limit(50).exec(function(err, latestPosts) {
+        if (err) return res.send(err);
         res.render('pages/index', {
             viewDataSignStatus: viewDataSignedIn[signedIn],
             previews: latestPosts
         });
     });
+});
+
+router.post('/', function(req, res, next) {
+    console.log("router.post('/'..... req.body: " + req.body);
+    console.log("req.body.tags: "+req.body.tags);
+    var tags = req.body.tags.split(",").map(Function.prototype.call, String.prototype.trim);
+    if(tags.length==0) {
+        res.redirect("/");
+    }
+    console.log("tags: " + tags);
+    var qString = qs.stringify({filter: tags});
+    console.log("qstring: " + qString);
+    var url = "/?" + qString;
+    console.log("url: " + url);
+    res.redirect(url);
+    res.send();
 });
 
 router.get('/article', function(req, res, next) {
@@ -39,6 +119,7 @@ router.get('/article', function(req, res, next) {
     Post.findOne({'_id':articleID}).exec(function(err, article) {
         if (err) return res.send(err);
         if(article==null) return res.send("not found");
+       // var numberOfRelatedPostsFittable = article.body.length;
         Post.find({ author: article.author }).where('_id').ne(articleID).sort({created:-1}).limit(3).exec(function(err, otherPosts) {
             if (err) return res.send(err);
             var signedIn = accountController.session.userProfileModel !== undefined ? 1 : 0;
@@ -48,6 +129,7 @@ router.get('/article', function(req, res, next) {
                 PostMedia: article.media,
                 PostBody: article.body,
                 PostAuthor: article.author,
+                comments: article.comments,
                 ID: article._id,
                 previews: otherPosts
             }
@@ -75,7 +157,8 @@ router.post('/comment', function(req, res, next) {
     function(err, updatedPostModel) {
         if(err) res.send(err);
         console.log(updatedPostModel);
-        res.redirect('/article');
+        var articleURL = "/article?ID=" +  articleID;
+        res.redirect(articleURL);
     });
     
 });
