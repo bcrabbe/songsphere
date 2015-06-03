@@ -37,11 +37,6 @@ ejs.filters.get = function(obj, prop, def) {
   return obj[prop] === undefined ? def : obj[prop];
 };
 
-ejs.filters.signedIn = function(obj, prop, def) {
-  return obj[prop] === undefined ? def : obj[prop];
-};
-
-
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -69,7 +64,6 @@ fs.readdirSync(__dirname + '/models').forEach(function(filename) {
 });
 
 app.use('/', routes);
-//app.use('/users', users);
 
 
 

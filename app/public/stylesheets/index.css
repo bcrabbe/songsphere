@@ -6,10 +6,32 @@ div.row div.well h4 {
     color: #222;
 }
 
+a.navbar-brand img.cusBrand,
+a.navbar-brand,
+div.navbar-header {
+    float: center;
+    width: 45px;
+    height:45px;
+}
+
+#navbar > ul > li:nth-child(3) {
+    height: 45;
+
+}
+
+#navbar > ul > li:nth-child(3) > a {
+    height: 45;
+}
+
+#my-navbar > div {
+    height:55;
+}
+
 body {
     background: #222;
     color: #EEE;
 }
+
 
 div.content-preview, div.other-posts-from-user {
     border-width: 2px;
@@ -99,6 +121,7 @@ input[type="color"]:focus,
 }
 
 #my-navbar {
+   height: 55px;
    border-bottom-width: 2px;
    border-bottom-color: #FF6B00;
    border-top-width: 3px;
@@ -204,8 +227,9 @@ sign-in-remember-me {
     overflow: visible;
     padding-top: 0;
     padding-bottom: 0;
-    float: left;
+    float: top;
     margin: 5px;
+    vertical-align: top;
 }
 
 .form-tag-filter {

@@ -7,5 +7,5 @@ ApiMessages.USERNAME_ALREADY_EXISTS = 4;
 ApiMessages.COULD_NOT_CREATE_USER = 5;
 ApiMessages.PASSWORD_CONFIRM_MISMATCH = 6;
 ApiMessages.COULD_NOT_CREATE_POST =7;
-
+ApiMessages.COULD_NOT_DELETE_POST=8;
 module.exports = ApiMessages;

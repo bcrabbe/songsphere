@@ -12,11 +12,12 @@
                     <div class="jumbotron">
                         <h2><%= PostTitle %></h2>
                         <a href="/?author=<%= PostAuthor%>"><mark class="author"><%= PostAuthor%></mark></a>
-                        <br/><br/>
+                        <br/>
+                        <%-: locals | get:'deleteLink','' -%>
                         <div class="embed-responsive embed-responsive-16by9">
-                            <%= PostMedia %>
+                            <%- PostMedia -%>
                         </div>
-                        <br/><br/>
+                        <br/>
                         <p><%= PostBody %>
                         </p>
                     </div>
@@ -31,7 +32,7 @@
                         <a href="/?author=<%= post.author%>"><mark class="author"><%= post.author%></mark></a>
                         <br/>
                         <div class="embed-responsive embed-responsive-16by9">
-                        <%= post.media %>
+                        <%- post.media -%>
                         </div>
 
                         <span class="content-tags">

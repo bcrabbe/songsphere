@@ -27,26 +27,35 @@ PostController.prototype.addPost = function(newPost, callback) {
     });
 };
 
-PostController.prototype.renderPost = function(res, session, post) {
-    if(session.userProfileModel !== undefined) {
-        var articleViewData = {
-            signInOrOut: "sign out",
-            signRoute: "./sign-out",
-            title: post.title,
-            media: post.media,
-            body: post.body
-        }
-    } else {
-        var articleViewData = {
-            signInOrOut: "sign in",
-            signRoute: "./sign-in",
-            title: post.title,
-            media: post.media,
-            body: post.body
-        }
-    }
-    res.render('pages/article', articleViewData);
-}
+//deletes a post from the database
+PostController.prototype.deletePost = function(deleteID, callback) {
+    console.log("deletePost");
+    console.log(deleteID);
+    
+    
+    var me = this;
+    
+    Post.findOne({ _id : deleteID}, function (err, model) {
+        if(err)console.log(err);
+        model.remove(function (err) {
+            if(err)console.log(err);
+            callback(err);
+
+        });
+    });
+    
+ 
+};
+
+
+//deletes all posts from the database
+PostController.prototype.deleteAllPosts = function(callback) {
+    var me = this;
+    Post.remove({}, function(err,removed) {
+        if(err) console.log(err);
+        console.log(removed);
+    });
+};
 
 PostController.prototype.getPostFromNewPost = function(newPost) {
     var me = this;
