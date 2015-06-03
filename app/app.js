@@ -17,7 +17,6 @@ mongoose.connect(connectionString);
 
 
 var routes = require('./routes/index');
-//var users = require('./routes/users');
 var key = fs.readFileSync('songsphere-key.pem');
 var cert = fs.readFileSync('songsphere-cert.pem')
 var options = {
@@ -26,16 +25,11 @@ var options = {
 };
 var app = express();
 
-// sets port 8080 to default or unless otherwise specified in the environment
 https.createServer(options, app).listen(4111);
 
 // view engine setup
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
-
-ejs.filters.get = function(obj, prop, def) {
-  return obj[prop] === undefined ? def : obj[prop];
-};
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -59,12 +53,16 @@ db.once('open', function (callback) {
 });
 
 //load all files in models dir
-fs.readdirSync(__dirname + '/models').forEach(function(filename) {
-  if (~filename.indexOf('.js')) require(__dirname + '/models/' + filename)
-});
+//fs.readdirSync(__dirname + '/models').forEach(function(filename) {
+//  if (~filename.indexOf('.js')) require(__dirname + '/models/' + filename)
+//});
 
 app.use('/', routes);
 
+//custom ejs filter, sets to default value if data not supplied
+ejs.filters.get = function(obj, prop, def) {
+  return obj[prop] === undefined ? def : obj[prop];
+};
 
 
 // catch 404 and forward to error handler

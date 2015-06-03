@@ -5746,3 +5746,31 @@ As the glockenspiel skips ou...", _id: ObjectId('556f673da0714d55e6a1c30c'), com
 2015-06-03T23:58:08.933+0100 [conn1522] end connection 127.0.0.1:58520 (4 connections now open)
 2015-06-03T23:58:08.933+0100 [conn1523] end connection 127.0.0.1:58521 (4 connections now open)
 2015-06-03T23:58:08.933+0100 [conn1521] end connection 127.0.0.1:58519 (4 connections now open)
+2015-06-04T00:00:08.677+0100 [clientcursormon] mem (MB) res:3 virt:2800
+2015-06-04T00:00:08.678+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-04T00:00:08.678+0100 [clientcursormon]  connections:0
+2015-06-04T00:02:10.727+0100 [TTLMonitor] query songsphere.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:4 nscannedObjects:4 keyUpdates:0 numYields:0 locks(micros) r:244589 nreturned:1 reslen:150 244ms
+2015-06-04T00:05:08.901+0100 [clientcursormon] mem (MB) res:2 virt:2800
+2015-06-04T00:05:08.979+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-04T00:05:08.979+0100 [clientcursormon]  connections:0
+2015-06-04T00:09:33.709+0100 [initandlisten] connection accepted from 127.0.0.1:58936 #1526 (1 connection now open)
+2015-06-04T00:10:09.179+0100 [clientcursormon] mem (MB) res:2 virt:2800
+2015-06-04T00:10:09.233+0100 [clientcursormon]  mapped (incl journal view):320
+2015-06-04T00:10:09.233+0100 [clientcursormon]  connections:1
+2015-06-04T00:11:11.354+0100 [conn1526] terminating, shutdown command received
+2015-06-04T00:11:11.430+0100 [conn1526] dbexit: shutdown called
+2015-06-04T00:11:11.431+0100 [conn1526] shutdown: going to close listening sockets...
+2015-06-04T00:11:11.431+0100 [conn1526] closing listening socket: 8
+2015-06-04T00:11:11.431+0100 [conn1526] closing listening socket: 9
+2015-06-04T00:11:11.431+0100 [conn1526] removing socket file: /tmp/mongodb-27017.sock
+2015-06-04T00:11:11.538+0100 [conn1526] shutdown: going to flush diaglog...
+2015-06-04T00:11:11.538+0100 [conn1526] shutdown: going to close sockets...
+2015-06-04T00:11:11.548+0100 [conn1526] shutdown: waiting for fs preallocator...
+2015-06-04T00:11:11.549+0100 [conn1526] shutdown: lock for final commit...
+2015-06-04T00:11:11.550+0100 [conn1526] shutdown: final commit...
+2015-06-04T00:11:11.551+0100 [conn1526] shutdown: closing all files...
+2015-06-04T00:11:11.552+0100 [conn1526] closeAllFiles() finished
+2015-06-04T00:11:11.560+0100 [conn1526] journalCleanup...
+2015-06-04T00:11:11.560+0100 [conn1526] removeJournalFiles
+2015-06-04T00:11:11.659+0100 [conn1526] shutdown: removing fs lock...
+2015-06-04T00:11:11.659+0100 [conn1526] dbexit: really exiting now
