@@ -3,9 +3,7 @@ var express = require('express'),
     qs = require('querystring'),
     router = express.Router(),
     AccountController = require('../controllers/account.js'),
-    UserController = require('../controllers/user.js'),
     PostController = require('../controllers/posts.js'),
-    UserRegistration = require('../models/user-registration.js'),
     UserLogon = require('../models/user-logon.js'),
     User = require('../models/user.js'),
     Post = require('../models/posts.js'),
@@ -79,8 +77,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-    console.log("router.post('/'..... req.body: " + req.body);
-    console.log("req.body.tags: "+req.body.tags);
     var tags = req.body.tags.split(",").map(Function.prototype.call, String.prototype.trim);
     if(tags.length==0) {
         res.redirect("/");
@@ -248,10 +244,8 @@ router.get('/register', function(req, res, next) {
 });
 
 router.post('/register', function(req, res, next) {
-    //console.log(req.body);
     var accountController = new AccountController(User, req.session);
-    var userRegistration = new UserRegistration(req.body);
-    var apiResponseStep1 = accountController.getUserFromUserRegistration(userRegistration);
+    var apiResponseStep1 = accountController.getUserFromUserRegistration(req.body);
     if (apiResponseStep1.success) {
         accountController.register(apiResponseStep1.extras.user, function (err, apiResponseStep2) {
             if (apiResponseStep2.success===true) {
