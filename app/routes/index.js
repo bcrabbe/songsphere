@@ -9,8 +9,6 @@ var express = require('express'),
     Post = require('../models/posts.js'),
     NewPost = require('../models/new-post.js'),
     ApiResponse = require('../models/api-response.js'),
-    UserPasswordReset = require('../models/user-pwd-reset.js'),
-    UserPasswordResetFinal = require('../models/user-pwd-reset-final.js'),
     session = [],
     viewDataSignedIn = [{signInOrOut: "sign in", signRoute: "./sign-in"},
                         {signInOrOut: "sign out", signRoute: "./sign-out"}],
@@ -19,18 +17,22 @@ var express = require('express'),
                      "passwords do not match", "could not create post","could not delete post"];
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
     var accountController = new AccountController(User, req.session);
+    console.log("here1");
     var signedIn = accountController.session.userProfileModel !== undefined ? 1 : 0;
-    
+    console.log("here2");
+
+    //Author search
     if(req.query.author !== undefined) {
         var author = req.query.author;
         Post.find().where('author').equals(author).sort({ created: -1 }).limit(10).exec(function(err, authorsPosts) {
-            if (err) return res.send(err);
+            if (err) return res.send("error");
             console.log("\n\nAuthorsPosts:" +authorsPosts);
             console.log("\n\authorsPosts.length: " +authorsPosts.length);
             console.log("authors post.constructor = " +authorsPosts.constructor);
             if(authorsPosts.length==0) {
+                console.log("length=0");
                 res.render('pages/index', {
                     viewDataSignStatus: viewDataSignedIn[signedIn],
                     previews: authorsPosts,
@@ -44,14 +46,15 @@ router.get('/', function(req, res, next) {
             }
         });
     }
-    
+    //Tag search
     if(req.query.filter !== undefined) {
         var tagList = req.query.filter.constructor == Array ? req.query.filter : req.query.filter.split(",");
         Post.find( { tags : { $elemMatch: { $in : tagList } } } ).limit(10).exec(function(err, taggedPosts) {
-            if (err) return res.send(err);
+            if (err) return res.send("error");
             console.log("\n\taggedPosts.length: " +taggedPosts.length);
-
             if(taggedPosts.length==0) {
+                console.log("length=0");
+                
                 res.render('pages/index', {
                     viewDataSignStatus: viewDataSignedIn[signedIn],
                     previews: taggedPosts,
@@ -66,7 +69,7 @@ router.get('/', function(req, res, next) {
             }
         });
     }
-    
+    //or just latest
     Post.find().sort({ created: 1 }).limit(10).exec(function(err, latestPosts) {
         if (err) return res.send(err);
         res.render('pages/index', {
@@ -76,14 +79,17 @@ router.get('/', function(req, res, next) {
     });
 });
 
-router.post('/', function(req, res, next) {
+router.post('/', function(req, res) {
     var tags = req.body.tags.split(",").map(Function.prototype.call, String.prototype.trim);
     if(tags.length==0) {
         res.redirect("/");
     }
     var qString = qs.stringify({filter: tags});
     var url = "/?" + qString;
-    res.redirect(url);
+  //  res.redirect(url);
+    res.statusCode = 302;
+    res.setHeader("Location", url);
+    res.end();
 //    res.send();
 });
 
@@ -249,7 +255,16 @@ router.post('/register', function(req, res, next) {
     if (apiResponseStep1.success) {
         accountController.register(apiResponseStep1.extras.user, function (err, apiResponseStep2) {
             if (apiResponseStep2.success===true) {
-                res.redirect('/');
+                //success->logged in -> index
+                accountController.logon(req.body.username, req.body.password, function (err, response) {
+                    if(response.success==false) {
+                        res.render('pages/signin', {
+                            viewDataSignStatus: viewDataSignedIn[0],
+                            error: errorMessages[response.extras.msg]
+                        });
+                    }
+                    res.redirect('/');
+                });
             } else {
                 res.render('pages/register', {
                     viewDataSignStatus: viewDataSignedIn[0],

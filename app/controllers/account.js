@@ -78,7 +78,6 @@ AccountController.prototype.logon = function(username, password, callback) {
         } else {
             return callback(err, new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.USERNAME_NOT_FOUND } }));
         }
-
     });
 };
 
@@ -93,19 +92,16 @@ AccountController.prototype.getUserFromUserRegistration = function(userRegistrat
     if (userRegistrationModel.password !== userRegistrationModel.passwordConfirm) {
         return new me.ApiResponse({ success: false, extras: { msg: me.ApiMessages.PASSWORD_CONFIRM_MISMATCH } });
     }
-    
     var passwordSaltIn = this.uuid.v4(),
         cryptoIterations = 10000,
         cryptoKeyLen = 64,
         passwordHashIn;
-
     var user = new this.User({
         username: userRegistrationModel.username,
         email: userRegistrationModel.email,
         passwordHash: this.crypto.pbkdf2Sync(userRegistrationModel.password, passwordSaltIn, cryptoIterations, cryptoKeyLen).toString('hex'),
         passwordSalt: passwordSaltIn
     });
-
     return new me.ApiResponse({ success: true, extras: { user: user } });
 }
 
