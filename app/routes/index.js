@@ -79,7 +79,7 @@ router.post('/', function(req, res) {
 
 router.get('/article', function(req, res, next) {
     var accountController = new AccountController(User, req.session);
-    if(req.query.ID === undefined) res.send("error");
+    if(req.query.ID === undefined) return res.send("error");
     var articleID = mongoose.Types.ObjectId(req.query.ID);
     Post.findOne({'_id':articleID}).exec(function(err, article) {
         if (err) return res.send(err);
@@ -126,12 +126,16 @@ router.get('/delete', function(req,res, next) {
     Post.findOne({ _id : articleID}, function (err, post) {
         if(err) {
             console.log(err);
-            res.send(err);
+            return res.send(err);
+        }
+        if(accountController.session.userProfileModel == undefined ||
+           accountController.session.userProfileModel.username !==post.username) {
+                return res.send("You must be signed in as the author to delete a post.");
         }
         post.remove(function (err) {
             if(err) {
                 console.log(err);
-                res.send(err);
+                return res.send(err);
             }
             else res.redirect("/");
         });
@@ -156,7 +160,6 @@ router.post('/comment', function(req, res, next) {
         var articleURL = "/article?ID=" +  articleID;
         res.redirect(articleURL);
     });
-    
 });
 
 

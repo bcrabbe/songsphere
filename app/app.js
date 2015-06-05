@@ -53,11 +53,6 @@ db.once('open', function (callback) {
   console.log("conected");
 });
 
-//load all files in models dir
-//fs.readdirSync(__dirname + '/models').forEach(function(filename) {
-//  if (~filename.indexOf('.js')) require(__dirname + '/models/' + filename)
-//});
-
 app.use('/', routes);
 
 //custom ejs filter, sets to default value if data not supplied
@@ -80,10 +75,6 @@ app.use(function(req, res, next) {
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-//    res.render('error', {
-//      message: err.message,
-//      error: err
-//    });
     res.send(err);
     
   });
@@ -93,12 +84,7 @@ if (app.get('env') === 'development') {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
-//  res.render('error', {
-//    message: err.message,
-//    error: {}
-//  });
     res.send(err);
-
 });
 
 
