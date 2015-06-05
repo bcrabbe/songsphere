@@ -1,0 +1,25 @@
+ <nav id="my-navbar" class="navbar navbar-fixed-top navbar-inverse navbar-inverse-gradient">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="./"><img class="img-responsive cusBrand" src="./images/logoCirc.svg" alt="Brand"/></a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./">Song Sphere</a></li>
+                        <li>
+                            <form class="navbar-form navbar-left" role="search" action="/" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="form-tag-filter" placeholder="Tags" name="tags"/>
+                                </div>
+                                <button type="submit" class="btn btn-default" id="btn-tag-filter"  >Filter</button>
+                            </form>
+                        </li>
+                        <li><a href="<%= viewDataSignStatus.signRoute %>" class="navbar-sign-in"> <p><%=: viewDataSignStatus.signInOrOut %></p> </a></li>
+                        <li><a href="./post" class="navbar-post"> Post </a></li>
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div><!-- /.container -->
+        </nav><!-- /.navbar -->
